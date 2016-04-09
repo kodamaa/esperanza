@@ -13,6 +13,10 @@
 		D1B0D5E11CB8F13800109F75 /* esperanza.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D1B0D5DF1CB8F13800109F75 /* esperanza.xcdatamodeld */; };
 		D1B0D5E31CB8F13800109F75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1B0D5E21CB8F13800109F75 /* Assets.xcassets */; };
 		D1B0D5E61CB8F13800109F75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1B0D5E41CB8F13800109F75 /* LaunchScreen.storyboard */; };
+		D1B0D5F21CB9045700109F75 /* CanvasView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1B0D5F11CB9045700109F75 /* CanvasView.xib */; };
+		D1B0D5FA1CB9343100109F75 /* ACEDrawingTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B0D5F71CB9343100109F75 /* ACEDrawingTools.m */; };
+		D1B0D5FB1CB9343100109F75 /* ACEDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B0D5F91CB9343100109F75 /* ACEDrawingView.m */; };
+		D1B0D5FD1CB93DB000109F75 /* DrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B0D5FC1CB93DB000109F75 /* DrawViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,13 @@
 		D1B0D5E21CB8F13800109F75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1B0D5E51CB8F13800109F75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1B0D5E71CB8F13800109F75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1B0D5F11CB9045700109F75 /* CanvasView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CanvasView.xib; sourceTree = "<group>"; };
+		D1B0D5F51CB9343000109F75 /* esperanza-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "esperanza-Bridging-Header.h"; sourceTree = "<group>"; };
+		D1B0D5F61CB9343100109F75 /* ACEDrawingTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACEDrawingTools.h; sourceTree = "<group>"; };
+		D1B0D5F71CB9343100109F75 /* ACEDrawingTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACEDrawingTools.m; sourceTree = "<group>"; };
+		D1B0D5F81CB9343100109F75 /* ACEDrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACEDrawingView.h; sourceTree = "<group>"; };
+		D1B0D5F91CB9343100109F75 /* ACEDrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACEDrawingView.m; sourceTree = "<group>"; };
+		D1B0D5FC1CB93DB000109F75 /* DrawViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +67,38 @@
 		D1B0D5D71CB8F13800109F75 /* esperanza */ = {
 			isa = PBXGroup;
 			children = (
+				D1B0D5F31CB9331D00109F75 /* Freamwork */,
 				D1B0D5D81CB8F13800109F75 /* AppDelegate.swift */,
 				D1B0D5DA1CB8F13800109F75 /* ViewController.swift */,
+				D1B0D5FC1CB93DB000109F75 /* DrawViewController.swift */,
 				D1B0D5DC1CB8F13800109F75 /* Main.storyboard */,
+				D1B0D5F11CB9045700109F75 /* CanvasView.xib */,
 				D1B0D5E21CB8F13800109F75 /* Assets.xcassets */,
 				D1B0D5E41CB8F13800109F75 /* LaunchScreen.storyboard */,
 				D1B0D5E71CB8F13800109F75 /* Info.plist */,
 				D1B0D5DF1CB8F13800109F75 /* esperanza.xcdatamodeld */,
 			);
 			path = esperanza;
+			sourceTree = "<group>";
+		};
+		D1B0D5F31CB9331D00109F75 /* Freamwork */ = {
+			isa = PBXGroup;
+			children = (
+				D1B0D5F41CB9333F00109F75 /* ACEDrawingView */,
+			);
+			name = Freamwork;
+			sourceTree = "<group>";
+		};
+		D1B0D5F41CB9333F00109F75 /* ACEDrawingView */ = {
+			isa = PBXGroup;
+			children = (
+				D1B0D5F61CB9343100109F75 /* ACEDrawingTools.h */,
+				D1B0D5F71CB9343100109F75 /* ACEDrawingTools.m */,
+				D1B0D5F81CB9343100109F75 /* ACEDrawingView.h */,
+				D1B0D5F91CB9343100109F75 /* ACEDrawingView.m */,
+				D1B0D5F51CB9343000109F75 /* esperanza-Bridging-Header.h */,
+			);
+			name = ACEDrawingView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +162,7 @@
 			files = (
 				D1B0D5E61CB8F13800109F75 /* LaunchScreen.storyboard in Resources */,
 				D1B0D5E31CB8F13800109F75 /* Assets.xcassets in Resources */,
+				D1B0D5F21CB9045700109F75 /* CanvasView.xib in Resources */,
 				D1B0D5DE1CB8F13800109F75 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +174,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1B0D5FD1CB93DB000109F75 /* DrawViewController.swift in Sources */,
+				D1B0D5FB1CB9343100109F75 /* ACEDrawingView.m in Sources */,
+				D1B0D5FA1CB9343100109F75 /* ACEDrawingTools.m in Sources */,
 				D1B0D5DB1CB8F13800109F75 /* ViewController.swift in Sources */,
 				D1B0D5D91CB8F13800109F75 /* AppDelegate.swift in Sources */,
 				D1B0D5E11CB8F13800109F75 /* esperanza.xcdatamodeld in Sources */,
@@ -254,10 +292,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = esperanza/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xxx.esperanza;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "esperanza/esperanza-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -265,10 +306,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = esperanza/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xxx.esperanza;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "esperanza/esperanza-Bridging-Header.h";
 			};
 			name = Release;
 		};
