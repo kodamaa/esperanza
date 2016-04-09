@@ -1,0 +1,311 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D1B0D5D91CB8F13800109F75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B0D5D81CB8F13800109F75 /* AppDelegate.swift */; };
+		D1B0D5DB1CB8F13800109F75 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B0D5DA1CB8F13800109F75 /* ViewController.swift */; };
+		D1B0D5DE1CB8F13800109F75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1B0D5DC1CB8F13800109F75 /* Main.storyboard */; };
+		D1B0D5E11CB8F13800109F75 /* esperanza.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D1B0D5DF1CB8F13800109F75 /* esperanza.xcdatamodeld */; };
+		D1B0D5E31CB8F13800109F75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1B0D5E21CB8F13800109F75 /* Assets.xcassets */; };
+		D1B0D5E61CB8F13800109F75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1B0D5E41CB8F13800109F75 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D1B0D5D51CB8F13800109F75 /* esperanza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = esperanza.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1B0D5D81CB8F13800109F75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D1B0D5DA1CB8F13800109F75 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D1B0D5DD1CB8F13800109F75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D1B0D5E01CB8F13800109F75 /* esperanza.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = esperanza.xcdatamodel; sourceTree = "<group>"; };
+		D1B0D5E21CB8F13800109F75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D1B0D5E51CB8F13800109F75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D1B0D5E71CB8F13800109F75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D1B0D5D21CB8F13800109F75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D1B0D5CC1CB8F13800109F75 = {
+			isa = PBXGroup;
+			children = (
+				D1B0D5D71CB8F13800109F75 /* esperanza */,
+				D1B0D5D61CB8F13800109F75 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D1B0D5D61CB8F13800109F75 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D1B0D5D51CB8F13800109F75 /* esperanza.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D1B0D5D71CB8F13800109F75 /* esperanza */ = {
+			isa = PBXGroup;
+			children = (
+				D1B0D5D81CB8F13800109F75 /* AppDelegate.swift */,
+				D1B0D5DA1CB8F13800109F75 /* ViewController.swift */,
+				D1B0D5DC1CB8F13800109F75 /* Main.storyboard */,
+				D1B0D5E21CB8F13800109F75 /* Assets.xcassets */,
+				D1B0D5E41CB8F13800109F75 /* LaunchScreen.storyboard */,
+				D1B0D5E71CB8F13800109F75 /* Info.plist */,
+				D1B0D5DF1CB8F13800109F75 /* esperanza.xcdatamodeld */,
+			);
+			path = esperanza;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D1B0D5D41CB8F13800109F75 /* esperanza */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1B0D5EA1CB8F13800109F75 /* Build configuration list for PBXNativeTarget "esperanza" */;
+			buildPhases = (
+				D1B0D5D11CB8F13800109F75 /* Sources */,
+				D1B0D5D21CB8F13800109F75 /* Frameworks */,
+				D1B0D5D31CB8F13800109F75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = esperanza;
+			productName = esperanza;
+			productReference = D1B0D5D51CB8F13800109F75 /* esperanza.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D1B0D5CD1CB8F13800109F75 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = tokonatsutan;
+				TargetAttributes = {
+					D1B0D5D41CB8F13800109F75 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 8MWWY9XV8Z;
+					};
+				};
+			};
+			buildConfigurationList = D1B0D5D01CB8F13800109F75 /* Build configuration list for PBXProject "esperanza" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D1B0D5CC1CB8F13800109F75;
+			productRefGroup = D1B0D5D61CB8F13800109F75 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D1B0D5D41CB8F13800109F75 /* esperanza */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D1B0D5D31CB8F13800109F75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1B0D5E61CB8F13800109F75 /* LaunchScreen.storyboard in Resources */,
+				D1B0D5E31CB8F13800109F75 /* Assets.xcassets in Resources */,
+				D1B0D5DE1CB8F13800109F75 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D1B0D5D11CB8F13800109F75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1B0D5DB1CB8F13800109F75 /* ViewController.swift in Sources */,
+				D1B0D5D91CB8F13800109F75 /* AppDelegate.swift in Sources */,
+				D1B0D5E11CB8F13800109F75 /* esperanza.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D1B0D5DC1CB8F13800109F75 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D1B0D5DD1CB8F13800109F75 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D1B0D5E41CB8F13800109F75 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D1B0D5E51CB8F13800109F75 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D1B0D5E81CB8F13800109F75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D1B0D5E91CB8F13800109F75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D1B0D5EB1CB8F13800109F75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = esperanza/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xxx.esperanza;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D1B0D5EC1CB8F13800109F75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = esperanza/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xxx.esperanza;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D1B0D5D01CB8F13800109F75 /* Build configuration list for PBXProject "esperanza" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1B0D5E81CB8F13800109F75 /* Debug */,
+				D1B0D5E91CB8F13800109F75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1B0D5EA1CB8F13800109F75 /* Build configuration list for PBXNativeTarget "esperanza" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1B0D5EB1CB8F13800109F75 /* Debug */,
+				D1B0D5EC1CB8F13800109F75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D1B0D5DF1CB8F13800109F75 /* esperanza.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D1B0D5E01CB8F13800109F75 /* esperanza.xcdatamodel */,
+			);
+			currentVersion = D1B0D5E01CB8F13800109F75 /* esperanza.xcdatamodel */;
+			path = esperanza.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D1B0D5CD1CB8F13800109F75 /* Project object */;
+}
