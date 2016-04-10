@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF5F2949266979C284521732 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5DF5A6D0228AD811FADC91 /* libPods.a */; };
 		D1B0D5D91CB8F13800109F75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B0D5D81CB8F13800109F75 /* AppDelegate.swift */; };
 		D1B0D5DB1CB8F13800109F75 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B0D5DA1CB8F13800109F75 /* ViewController.swift */; };
 		D1B0D5DE1CB8F13800109F75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1B0D5DC1CB8F13800109F75 /* Main.storyboard */; };
@@ -14,12 +15,13 @@
 		D1B0D5E31CB8F13800109F75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1B0D5E21CB8F13800109F75 /* Assets.xcassets */; };
 		D1B0D5E61CB8F13800109F75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1B0D5E41CB8F13800109F75 /* LaunchScreen.storyboard */; };
 		D1B0D5F21CB9045700109F75 /* CanvasView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1B0D5F11CB9045700109F75 /* CanvasView.xib */; };
-		D1B0D5FA1CB9343100109F75 /* ACEDrawingTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B0D5F71CB9343100109F75 /* ACEDrawingTools.m */; };
-		D1B0D5FB1CB9343100109F75 /* ACEDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B0D5F91CB9343100109F75 /* ACEDrawingView.m */; };
 		D1B0D5FD1CB93DB000109F75 /* DrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B0D5FC1CB93DB000109F75 /* DrawViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F88B21923C9A53DB73604AA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		4E5DF5A6D0228AD811FADC91 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B85922D601E83F16EC315B2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D1B0D5D51CB8F13800109F75 /* esperanza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = esperanza.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1B0D5D81CB8F13800109F75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1B0D5DA1CB8F13800109F75 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,10 +32,6 @@
 		D1B0D5E71CB8F13800109F75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1B0D5F11CB9045700109F75 /* CanvasView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CanvasView.xib; sourceTree = "<group>"; };
 		D1B0D5F51CB9343000109F75 /* esperanza-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "esperanza-Bridging-Header.h"; sourceTree = "<group>"; };
-		D1B0D5F61CB9343100109F75 /* ACEDrawingTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACEDrawingTools.h; sourceTree = "<group>"; };
-		D1B0D5F71CB9343100109F75 /* ACEDrawingTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACEDrawingTools.m; sourceTree = "<group>"; };
-		D1B0D5F81CB9343100109F75 /* ACEDrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACEDrawingView.h; sourceTree = "<group>"; };
-		D1B0D5F91CB9343100109F75 /* ACEDrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACEDrawingView.m; sourceTree = "<group>"; };
 		D1B0D5FC1CB93DB000109F75 /* DrawViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -42,17 +40,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF5F2949266979C284521732 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7BADFFA52BBC6514512AE7E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4E5DF5A6D0228AD811FADC91 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		96926C0E24B206A13BDEA438 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7B85922D601E83F16EC315B2 /* Pods.debug.xcconfig */,
+				1F88B21923C9A53DB73604AA /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D1B0D5CC1CB8F13800109F75 = {
 			isa = PBXGroup;
 			children = (
 				D1B0D5D71CB8F13800109F75 /* esperanza */,
 				D1B0D5D61CB8F13800109F75 /* Products */,
+				96926C0E24B206A13BDEA438 /* Pods */,
+				7BADFFA52BBC6514512AE7E9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,10 +110,6 @@
 		D1B0D5F41CB9333F00109F75 /* ACEDrawingView */ = {
 			isa = PBXGroup;
 			children = (
-				D1B0D5F61CB9343100109F75 /* ACEDrawingTools.h */,
-				D1B0D5F71CB9343100109F75 /* ACEDrawingTools.m */,
-				D1B0D5F81CB9343100109F75 /* ACEDrawingView.h */,
-				D1B0D5F91CB9343100109F75 /* ACEDrawingView.m */,
 				D1B0D5F51CB9343000109F75 /* esperanza-Bridging-Header.h */,
 			);
 			name = ACEDrawingView;
@@ -108,9 +122,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D1B0D5EA1CB8F13800109F75 /* Build configuration list for PBXNativeTarget "esperanza" */;
 			buildPhases = (
+				64AA07ACF943A43E3ACB3318 /* Check Pods Manifest.lock */,
 				D1B0D5D11CB8F13800109F75 /* Sources */,
 				D1B0D5D21CB8F13800109F75 /* Frameworks */,
 				D1B0D5D31CB8F13800109F75 /* Resources */,
+				836DCD07545CC6FD687D3D5D /* Embed Pods Frameworks */,
+				E237C879CD335718A481FCD5 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -169,14 +186,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		64AA07ACF943A43E3ACB3318 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		836DCD07545CC6FD687D3D5D /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E237C879CD335718A481FCD5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D1B0D5D11CB8F13800109F75 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D1B0D5FD1CB93DB000109F75 /* DrawViewController.swift in Sources */,
-				D1B0D5FB1CB9343100109F75 /* ACEDrawingView.m in Sources */,
-				D1B0D5FA1CB9343100109F75 /* ACEDrawingTools.m in Sources */,
 				D1B0D5DB1CB8F13800109F75 /* ViewController.swift in Sources */,
 				D1B0D5D91CB8F13800109F75 /* AppDelegate.swift in Sources */,
 				D1B0D5E11CB8F13800109F75 /* esperanza.xcdatamodeld in Sources */,
@@ -290,6 +353,7 @@
 		};
 		D1B0D5EB1CB8F13800109F75 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B85922D601E83F16EC315B2 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -304,6 +368,7 @@
 		};
 		D1B0D5EC1CB8F13800109F75 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F88B21923C9A53DB73604AA /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -334,6 +399,7 @@
 				D1B0D5EC1CB8F13800109F75 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

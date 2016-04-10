@@ -30,7 +30,6 @@
 typedef enum {
     ACEDrawingToolTypePen,
     ACEDrawingToolTypeLine,
-    ACEDrawingToolTypeArrow,
     ACEDrawingToolTypeRectagleStroke,
     ACEDrawingToolTypeRectagleFill,
     ACEDrawingToolTypeEllipseStroke,

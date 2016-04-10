@@ -14,10 +14,6 @@ class DrawViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.whiteColor()
-        
-//        let canvas = UINib(nibName: "CanvasView", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! ACEDrawingView
-//        self.view.addSubview(canvas)
     }
     
     override func didReceiveMemoryWarning() {
