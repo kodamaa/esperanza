@@ -16,6 +16,16 @@
 		D1B0D5E61CB8F13800109F75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1B0D5E41CB8F13800109F75 /* LaunchScreen.storyboard */; };
 		D1B0D5F21CB9045700109F75 /* CanvasView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1B0D5F11CB9045700109F75 /* CanvasView.xib */; };
 		D1B0D5FD1CB93DB000109F75 /* DrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B0D5FC1CB93DB000109F75 /* DrawViewController.swift */; };
+		D1C4FBE11CBBAE070096C689 /* black.png in Resources */ = {isa = PBXBuildFile; fileRef = D1C4FBD91CBBAE070096C689 /* black.png */; };
+		D1C4FBE21CBBAE070096C689 /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = D1C4FBDA1CBBAE070096C689 /* blue.png */; };
+		D1C4FBE31CBBAE070096C689 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = D1C4FBDB1CBBAE070096C689 /* green.png */; };
+		D1C4FBE41CBBAE070096C689 /* lightblue.png in Resources */ = {isa = PBXBuildFile; fileRef = D1C4FBDC1CBBAE070096C689 /* lightblue.png */; };
+		D1C4FBE51CBBAE070096C689 /* orange.png in Resources */ = {isa = PBXBuildFile; fileRef = D1C4FBDD1CBBAE070096C689 /* orange.png */; };
+		D1C4FBE61CBBAE070096C689 /* purple.png in Resources */ = {isa = PBXBuildFile; fileRef = D1C4FBDE1CBBAE070096C689 /* purple.png */; };
+		D1C4FBE71CBBAE070096C689 /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = D1C4FBDF1CBBAE070096C689 /* red.png */; };
+		D1C4FBE81CBBAE070096C689 /* yelow.png in Resources */ = {isa = PBXBuildFile; fileRef = D1C4FBE01CBBAE070096C689 /* yelow.png */; };
+		D1C4FBEA1CBBBA0E0096C689 /* Palette.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1C4FBE91CBBBA0E0096C689 /* Palette.xib */; };
+		D1C4FBEC1CBBC8A70096C689 /* paletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C4FBEB1CBBC8A70096C689 /* paletteView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +43,16 @@
 		D1B0D5F11CB9045700109F75 /* CanvasView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CanvasView.xib; sourceTree = "<group>"; };
 		D1B0D5F51CB9343000109F75 /* esperanza-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "esperanza-Bridging-Header.h"; sourceTree = "<group>"; };
 		D1B0D5FC1CB93DB000109F75 /* DrawViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawViewController.swift; sourceTree = "<group>"; };
+		D1C4FBD91CBBAE070096C689 /* black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = black.png; path = image/black.png; sourceTree = "<group>"; };
+		D1C4FBDA1CBBAE070096C689 /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blue.png; path = image/blue.png; sourceTree = "<group>"; };
+		D1C4FBDB1CBBAE070096C689 /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = green.png; path = image/green.png; sourceTree = "<group>"; };
+		D1C4FBDC1CBBAE070096C689 /* lightblue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lightblue.png; path = image/lightblue.png; sourceTree = "<group>"; };
+		D1C4FBDD1CBBAE070096C689 /* orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = orange.png; path = image/orange.png; sourceTree = "<group>"; };
+		D1C4FBDE1CBBAE070096C689 /* purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = purple.png; path = image/purple.png; sourceTree = "<group>"; };
+		D1C4FBDF1CBBAE070096C689 /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = red.png; path = image/red.png; sourceTree = "<group>"; };
+		D1C4FBE01CBBAE070096C689 /* yelow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = yelow.png; path = image/yelow.png; sourceTree = "<group>"; };
+		D1C4FBE91CBBBA0E0096C689 /* Palette.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Palette.xib; sourceTree = "<group>"; };
+		D1C4FBEB1CBBC8A70096C689 /* paletteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = paletteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +109,10 @@
 				D1B0D5D81CB8F13800109F75 /* AppDelegate.swift */,
 				D1B0D5DA1CB8F13800109F75 /* ViewController.swift */,
 				D1B0D5FC1CB93DB000109F75 /* DrawViewController.swift */,
+				D1C4FBEB1CBBC8A70096C689 /* paletteView.swift */,
 				D1B0D5DC1CB8F13800109F75 /* Main.storyboard */,
 				D1B0D5F11CB9045700109F75 /* CanvasView.xib */,
+				D1C4FBE91CBBBA0E0096C689 /* Palette.xib */,
 				D1B0D5E21CB8F13800109F75 /* Assets.xcassets */,
 				D1B0D5E41CB8F13800109F75 /* LaunchScreen.storyboard */,
 				D1B0D5E71CB8F13800109F75 /* Info.plist */,
@@ -102,6 +124,7 @@
 		D1B0D5F31CB9331D00109F75 /* Freamwork */ = {
 			isa = PBXGroup;
 			children = (
+				D1C4FBD81CBBADF50096C689 /* image */,
 				D1B0D5F41CB9333F00109F75 /* ACEDrawingView */,
 			);
 			name = Freamwork;
@@ -113,6 +136,21 @@
 				D1B0D5F51CB9343000109F75 /* esperanza-Bridging-Header.h */,
 			);
 			name = ACEDrawingView;
+			sourceTree = "<group>";
+		};
+		D1C4FBD81CBBADF50096C689 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				D1C4FBD91CBBAE070096C689 /* black.png */,
+				D1C4FBDA1CBBAE070096C689 /* blue.png */,
+				D1C4FBDB1CBBAE070096C689 /* green.png */,
+				D1C4FBDC1CBBAE070096C689 /* lightblue.png */,
+				D1C4FBDD1CBBAE070096C689 /* orange.png */,
+				D1C4FBDE1CBBAE070096C689 /* purple.png */,
+				D1C4FBDF1CBBAE070096C689 /* red.png */,
+				D1C4FBE01CBBAE070096C689 /* yelow.png */,
+			);
+			name = image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,10 +215,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1C4FBE81CBBAE070096C689 /* yelow.png in Resources */,
+				D1C4FBE41CBBAE070096C689 /* lightblue.png in Resources */,
+				D1C4FBE31CBBAE070096C689 /* green.png in Resources */,
 				D1B0D5E61CB8F13800109F75 /* LaunchScreen.storyboard in Resources */,
+				D1C4FBEA1CBBBA0E0096C689 /* Palette.xib in Resources */,
 				D1B0D5E31CB8F13800109F75 /* Assets.xcassets in Resources */,
 				D1B0D5F21CB9045700109F75 /* CanvasView.xib in Resources */,
 				D1B0D5DE1CB8F13800109F75 /* Main.storyboard in Resources */,
+				D1C4FBE11CBBAE070096C689 /* black.png in Resources */,
+				D1C4FBE61CBBAE070096C689 /* purple.png in Resources */,
+				D1C4FBE71CBBAE070096C689 /* red.png in Resources */,
+				D1C4FBE21CBBAE070096C689 /* blue.png in Resources */,
+				D1C4FBE51CBBAE070096C689 /* orange.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +289,7 @@
 				D1B0D5FD1CB93DB000109F75 /* DrawViewController.swift in Sources */,
 				D1B0D5DB1CB8F13800109F75 /* ViewController.swift in Sources */,
 				D1B0D5D91CB8F13800109F75 /* AppDelegate.swift in Sources */,
+				D1C4FBEC1CBBC8A70096C689 /* paletteView.swift in Sources */,
 				D1B0D5E11CB8F13800109F75 /* esperanza.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
