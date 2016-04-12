@@ -13,13 +13,17 @@ class DrawViewController: UIViewController, paletteViewDelegate {
     let toolbarHeight:CGFloat = 60
     
     @IBOutlet var drawingView: ACEDrawingView!
+    @IBOutlet weak var toolBar: UIToolbar!
+    var palette: paletteView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.drawingView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "viewTapped:"))
+        self.drawingView.lineWidth = 3.0
         
-//        let canvas = UINib(nibName: "CanvasView", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! ACEDrawingView
-//        self.view.addSubview(canvas)
+        // FIXME: アニメーションにしたい
+        self.toolBar.hidden = true
+        //        self.navigationController?.setToolbarHidden(false, animated: false)
     }
     
     override func didReceiveMemoryWarning() {
@@ -29,34 +33,53 @@ class DrawViewController: UIViewController, paletteViewDelegate {
     
     @IBAction func pen(sender: AnyObject) {
         self.drawingView.drawTool = ACEDrawingToolTypePen
+        self.drawingView.lineWidth = 3.0
+        self.drawingView.lineAlpha = 1.0
     }
     
     @IBAction func line(sender: AnyObject) {
-        self.drawingView.drawTool = ACEDrawingToolTypeLine
+        self.drawingView.drawTool = ACEDrawingToolTypePen
+        self.drawingView.lineWidth = 12.0
+        self.drawingView.lineAlpha = 0.8
     }
     
     @IBAction func eraser(sender: AnyObject) {
         self.drawingView.drawTool = ACEDrawingToolTypeEraser
     }
     
+    @IBAction func showToolBar(sender: AnyObject) {
+        self.toolBar.hidden = false
+    }
+    
+    func viewTapped(sender: UITapGestureRecognizer) {
+        self.toolBar.hidden = true
+        if palette != nil {
+            UIView.animateWithDuration(0.5, // アニメーションの時間
+                animations: {() -> Void  in
+                    // アニメーションする処理
+                    self.palette.frame.origin.y = self.view.frame.height + self.toolBar.frame.height + self.palette.frame.height
+            })
+        }
+    }
+    
     // TODO: Fixed Animation height
     @IBAction func color(sender: AnyObject) {
-        let palette = UINib(nibName: "Palette", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! paletteView
+        self.palette = UINib(nibName: "Palette", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! paletteView
         //枠線
-        palette.layer.borderWidth = 2.0
+        self.palette.layer.borderWidth = 2.0
         //枠線の色
-        palette.layer.borderColor = UIColor.blackColor().CGColor
+        self.palette.layer.borderColor = UIColor.blackColor().CGColor
         //角丸
-        palette.layer.cornerRadius = 10.0
-        palette.frame = CGRectMake(0, self.drawingView.frame.height, self.drawingView.frame.width, toolbarHeight)
-        palette.backgroundColor = UIColor.lightGrayColor()
-        palette.delegate = self
-        self.view.addSubview(palette)
+        self.palette.layer.cornerRadius = 10.0
+        self.palette.frame = CGRectMake(0, self.drawingView.frame.height, self.drawingView.frame.width, toolbarHeight)
+        self.palette.backgroundColor = UIColor.lightGrayColor()
+        self.palette.delegate = self
+        self.view.addSubview(self.palette)
         
         UIView.animateWithDuration(0.5, // アニメーションの時間
             animations: {() -> Void  in
                 // アニメーションする処理
-                palette.frame.origin.y = self.drawingView.frame.height - self.toolbarHeight
+                self.palette.frame.origin.y = self.view.frame.height - self.toolBar.frame.height - self.palette.frame.height
         })
     }
     
