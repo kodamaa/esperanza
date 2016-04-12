@@ -39,43 +39,117 @@
                         <viewControllerLayoutGuide type="top" id="NH4-Xh-MMj"/>
                         <viewControllerLayoutGuide type="bottom" id="cYc-D0-hKs"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ljV-pf-kqt" customClass="ACEDrawingView">
+                    <view key="view" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="ljV-pf-kqt">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tRr-qY-ECV">
-                                <rect key="frame" x="124" y="28" width="30" height="30"/>
-                                <state key="normal" title="line"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7io-4b-eSn" customClass="ACEDrawingView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUX-1d-IxS" userLabel="showToolBarButton">
+                                <rect key="frame" x="556" y="567" width="22" height="22"/>
                                 <connections>
-                                    <action selector="line:" destination="I1x-75-4Uo" eventType="touchUpInside" id="LbO-Rw-0IE"/>
+                                    <action selector="showToolBar:" destination="I1x-75-4Uo" eventType="touchUpInside" id="4fT-qf-Ycp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jDm-GJ-YN9">
-                                <rect key="frame" x="207" y="28" width="44" height="30"/>
-                                <state key="normal" title="eraser"/>
-                                <connections>
-                                    <action selector="eraser:" destination="I1x-75-4Uo" eventType="touchUpInside" id="ba8-b9-tip"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vSp-I0-ljF">
-                                <rect key="frame" x="291" y="28" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="color:" destination="I1x-75-4Uo" eventType="touchUpInside" id="5jm-Mc-0iH"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZB-XJ-1GE">
-                                <rect key="frame" x="28" y="28" width="30" height="30"/>
-                                <state key="normal" title="pen"/>
-                                <connections>
-                                    <action selector="pen:" destination="I1x-75-4Uo" eventType="touchUpInside" id="Arj-ur-Vny"/>
-                                </connections>
-                            </button>
+                            <toolbar clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gpK-Rx-0rb">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <color key="backgroundColor" red="0.4415443497474747" green="0.4415443497474747" blue="0.4415443497474747" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <barButtonItem style="plain" id="x7K-y3-iLn">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gZB-XJ-1GE">
+                                            <rect key="frame" x="20" y="7" width="35" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="pen"/>
+                                            <connections>
+                                                <action selector="pen:" destination="I1x-75-4Uo" eventType="touchUpInside" id="Arj-ur-Vny"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ZHf-fb-4Xa"/>
+                                    <barButtonItem style="plain" id="v8S-9v-S82">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tRr-qY-ECV">
+                                            <rect key="frame" x="125" y="7" width="35" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="line"/>
+                                            <connections>
+                                                <action selector="line:" destination="I1x-75-4Uo" eventType="touchUpInside" id="LbO-Rw-0IE"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ieo-1H-d7C"/>
+                                    <barButtonItem style="plain" id="qCm-hN-6zt">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jDm-GJ-YN9">
+                                            <rect key="frame" x="230" y="7" width="35" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="eraser"/>
+                                            <connections>
+                                                <action selector="eraser:" destination="I1x-75-4Uo" eventType="touchUpInside" id="ba8-b9-tip"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Hab-GU-90C"/>
+                                    <barButtonItem style="plain" id="f6G-9l-7nC">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vSp-I0-ljF">
+                                            <rect key="frame" x="335" y="7" width="35" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="color"/>
+                                            <connections>
+                                                <action selector="color:" destination="I1x-75-4Uo" eventType="touchUpInside" id="5jm-Mc-0iH"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="hCg-vW-0cU"/>
+                                    <barButtonItem style="plain" id="VMo-R0-4Je">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="c7n-i0-GNC">
+                                            <rect key="frame" x="440" y="7" width="35" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="image"/>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="1hc-w8-Nqj"/>
+                                    <barButtonItem style="plain" id="YYo-Vi-tns">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ocb-QY-PcU">
+                                            <rect key="frame" x="545" y="7" width="35" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button"/>
+                                        </button>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7io-4b-eSn" firstAttribute="leading" secondItem="ljV-pf-kqt" secondAttribute="leadingMargin" constant="-20" id="4Eg-0L-hC0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eUX-1d-IxS" secondAttribute="trailing" constant="2" id="5QZ-7y-pCI"/>
+                            <constraint firstItem="cYc-D0-hKs" firstAttribute="top" secondItem="7io-4b-eSn" secondAttribute="bottom" id="6fA-Ed-c4x"/>
+                            <constraint firstItem="7io-4b-eSn" firstAttribute="leading" secondItem="ljV-pf-kqt" secondAttribute="leading" id="A3b-Qf-LWC"/>
+                            <constraint firstItem="gpK-Rx-0rb" firstAttribute="leading" secondItem="ljV-pf-kqt" secondAttribute="leadingMargin" constant="-20" id="Mtc-Q4-nLU"/>
+                            <constraint firstItem="eUX-1d-IxS" firstAttribute="centerY" secondItem="gpK-Rx-0rb" secondAttribute="centerY" id="NAT-6L-9Ce"/>
+                            <constraint firstItem="eUX-1d-IxS" firstAttribute="leading" secondItem="ljV-pf-kqt" secondAttribute="leadingMargin" constant="536" id="NMJ-lL-IUK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eUX-1d-IxS" secondAttribute="trailing" constant="2" id="Oa6-bA-cVb"/>
+                            <constraint firstItem="eUX-1d-IxS" firstAttribute="top" secondItem="NH4-Xh-MMj" secondAttribute="bottom" constant="567" id="WDL-rH-jH4"/>
+                            <constraint firstItem="cYc-D0-hKs" firstAttribute="top" secondItem="eUX-1d-IxS" secondAttribute="bottom" constant="11" id="Y2c-kf-mMD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gpK-Rx-0rb" secondAttribute="trailing" constant="-20" id="eC5-CE-E9k"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7io-4b-eSn" secondAttribute="trailing" constant="-20" id="f83-1X-MtP"/>
+                            <constraint firstItem="cYc-D0-hKs" firstAttribute="top" secondItem="gpK-Rx-0rb" secondAttribute="bottom" id="msI-Df-d4m"/>
+                            <constraint firstItem="7io-4b-eSn" firstAttribute="top" secondItem="NH4-Xh-MMj" secondAttribute="bottom" id="vYx-kh-5Tg"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="A3b-Qf-LWC"/>
+                                <exclude reference="Y2c-kf-mMD"/>
+                                <exclude reference="NMJ-lL-IUK"/>
+                                <exclude reference="Oa6-bA-cVb"/>
+                                <exclude reference="WDL-rH-jH4"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <connections>
-                        <outlet property="drawingView" destination="ljV-pf-kqt" id="q4J-TS-s8u"/>
+                        <outlet property="drawingView" destination="7io-4b-eSn" id="tmw-oe-AfM"/>
+                        <outlet property="toolBar" destination="gpK-Rx-0rb" id="SEJ-yd-fkv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z6l-h4-XBK" userLabel="First Responder" sceneMemberID="firstResponder"/>
