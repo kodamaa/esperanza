@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DrawViewController: UIViewController, paletteViewDelegate {
+class DrawViewController: UIViewController, paletteViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     let toolbarHeight:CGFloat = 60
     
@@ -59,28 +59,75 @@ class DrawViewController: UIViewController, paletteViewDelegate {
                     // アニメーションする処理
                     self.palette.frame.origin.y = self.view.frame.height + self.toolBar.frame.height + self.palette.frame.height
             })
+            palette = nil
         }
     }
     
     // TODO: Fixed Animation height
     @IBAction func color(sender: AnyObject) {
-        self.palette = UINib(nibName: "Palette", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! paletteView
-        //枠線
-        self.palette.layer.borderWidth = 2.0
-        //枠線の色
-        self.palette.layer.borderColor = UIColor.blackColor().CGColor
-        //角丸
-        self.palette.layer.cornerRadius = 10.0
-        self.palette.frame = CGRectMake(0, self.drawingView.frame.height, self.drawingView.frame.width, toolbarHeight)
-        self.palette.backgroundColor = UIColor.lightGrayColor()
-        self.palette.delegate = self
-        self.view.addSubview(self.palette)
+        if self.palette == nil {
+            self.palette = UINib(nibName: "Palette", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! paletteView
+            //枠線
+            self.palette.layer.borderWidth = 2.0
+            //枠線の色
+            self.palette.layer.borderColor = UIColor.blackColor().CGColor
+            //角丸
+            self.palette.layer.cornerRadius = 10.0
+            self.palette.frame = CGRectMake(0, self.drawingView.frame.height, self.view.frame.width, self.toolBar.frame.height)
+            self.palette.backgroundColor = UIColor.lightGrayColor()
+            self.palette.delegate = self
+            self.view.addSubview(self.palette)
+            
+            UIView.animateWithDuration(0.5, // アニメーションの時間
+                animations: {() -> Void  in
+                    // アニメーションする処理
+                    self.palette.frame.origin.y = self.view.frame.height - self.toolBar.frame.height - self.palette.frame.height
+            })
+        }
+    }
+
+    @IBAction func setImage(sender: AnyObject) {
+        // TODO: 実装する
+//        self.pickImageFromCamera()
         
-        UIView.animateWithDuration(0.5, // アニメーションの時間
-            animations: {() -> Void  in
-                // アニメーションする処理
-                self.palette.frame.origin.y = self.view.frame.height - self.toolBar.frame.height - self.palette.frame.height
-        })
+        self.pickImageFromLibrary()
+    }
+    
+    // 写真を撮ってそれを選択
+    func pickImageFromCamera() {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
+            let controller = UIImagePickerController()
+            controller.delegate = self
+            controller.sourceType = UIImagePickerControllerSourceType.Camera
+            self.presentViewController(controller, animated: true, completion: nil)
+        }
+    }
+    
+    // ライブラリから写真を選択する
+    func pickImageFromLibrary() {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
+            let controller = UIImagePickerController()
+            controller.delegate = self
+            controller.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+            self.presentViewController(controller, animated: true, completion: nil)
+        }
+    }
+    
+    // 写真を選択した時に呼ばれる
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        if info[UIImagePickerControllerOriginalImage] != nil {
+            let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+            
+            let size = CGSize(width: 150, height: 150)
+            UIGraphicsBeginImageContext(size)
+            image.drawInRect(CGRectMake(0, 0, size.width, size.height))
+            let resizeImage = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            
+            // ACEDrawingView method
+            self.drawingView.loadImage(resizeImage)
+        }
+        picker.dismissViewControllerAnimated(true, completion: nil)
     }
     
     func changeDrawColor(tag:Int) {

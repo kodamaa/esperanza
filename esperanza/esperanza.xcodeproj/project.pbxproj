@@ -122,7 +122,6 @@
 		D1B0D5F31CB9331D00109F75 /* Freamwork */ = {
 			isa = PBXGroup;
 			children = (
-				D1C4FBD81CBBADF50096C689 /* image */,
 				D1B0D5F41CB9333F00109F75 /* ACEDrawingView */,
 			);
 			name = Freamwork;
@@ -138,13 +137,6 @@
 				D1B0D5F51CB9343000109F75 /* esperanza-Bridging-Header.h */,
 			);
 			name = ACEDrawingView;
-			sourceTree = "<group>";
-		};
-		D1C4FBD81CBBADF50096C689 /* image */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

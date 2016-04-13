@@ -101,11 +101,14 @@
                                         </button>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="hCg-vW-0cU"/>
-                                    <barButtonItem style="plain" id="VMo-R0-4Je">
+                                    <barButtonItem style="plain" id="VMo-R0-4Je" userLabel="image">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="c7n-i0-GNC">
                                             <rect key="frame" x="440" y="7" width="35" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="image"/>
+                                            <connections>
+                                                <action selector="setImage:" destination="I1x-75-4Uo" eventType="touchUpInside" id="bOe-RB-IMb"/>
+                                            </connections>
                                         </button>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="1hc-w8-Nqj"/>
