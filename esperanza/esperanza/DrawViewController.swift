@@ -15,6 +15,8 @@ class DrawViewController: UIViewController, paletteViewDelegate, UIImagePickerCo
     @IBOutlet var drawingView: ACEDrawingView!
     @IBOutlet weak var toolBar: UIToolbar!
     var palette: paletteView!
+    var dragImage = UIImageView()
+    var pan = UIPanGestureRecognizer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +55,17 @@ class DrawViewController: UIViewController, paletteViewDelegate, UIImagePickerCo
     
     func viewTapped(sender: UITapGestureRecognizer) {
         self.toolBar.hidden = true
+        
+        // FIXME: panGestureのみをremoveできなかったため、全部消して必要なものだけ再度addしている
+        // fix image position
+        self.drawingView.gestureRecognizers?.removeAll()
+        self.drawingView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "viewTapped:"))
+        if self.dragImage.image != nil {
+            // make capture
+            let img = self.toImage(self.drawingView)
+            self.drawingView.loadImage(img)
+            self.dragImage.image = nil
+        }
         if palette != nil {
             UIView.animateWithDuration(0.5, // アニメーションの時間
                 animations: {() -> Void  in
@@ -63,29 +76,7 @@ class DrawViewController: UIViewController, paletteViewDelegate, UIImagePickerCo
         }
     }
     
-    // TODO: Fixed Animation height
-    @IBAction func color(sender: AnyObject) {
-        if self.palette == nil {
-            self.palette = UINib(nibName: "Palette", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! paletteView
-            //枠線
-            self.palette.layer.borderWidth = 2.0
-            //枠線の色
-            self.palette.layer.borderColor = UIColor.blackColor().CGColor
-            //角丸
-            self.palette.layer.cornerRadius = 10.0
-            self.palette.frame = CGRectMake(0, self.drawingView.frame.height, self.view.frame.width, self.toolBar.frame.height)
-            self.palette.backgroundColor = UIColor.lightGrayColor()
-            self.palette.delegate = self
-            self.view.addSubview(self.palette)
-            
-            UIView.animateWithDuration(0.5, // アニメーションの時間
-                animations: {() -> Void  in
-                    // アニメーションする処理
-                    self.palette.frame.origin.y = self.view.frame.height - self.toolBar.frame.height - self.palette.frame.height
-            })
-        }
-    }
-
+    // MARK: set image
     @IBAction func setImage(sender: AnyObject) {
         // TODO: 実装する
 //        self.pickImageFromCamera()
@@ -124,11 +115,57 @@ class DrawViewController: UIViewController, paletteViewDelegate, UIImagePickerCo
             let resizeImage = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
             
-            // ACEDrawingView method
-            self.drawingView.loadImage(resizeImage)
+            self.dragImage = UIImageView(image: resizeImage)
+            self.dragImage.userInteractionEnabled = true
+
+            self.drawingView.addSubview(self.dragImage)
+            
+            pan = UIPanGestureRecognizer.init(target: self, action: "dragAction:")
+            self.drawingView.addGestureRecognizer(pan)
         }
         picker.dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    // @see: http://llcc.hatenablog.com/entry/2015/05/09/143511
+    func toImage(view: UIView) -> UIImage? {
+        UIGraphicsBeginImageContextWithOptions(view.frame.size, false, 0.0)
+        let context = UIGraphicsGetCurrentContext()
+        CGContextTranslateCTM(context, 0.0, 0.0)
+        view.layer.renderInContext(context!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return image
+    }
+    
+    // imageをドラッグで移動させるときに呼ばれる
+    func dragAction(sender:UIPanGestureRecognizer) {
+        let p = sender.translationInView(self.drawingView)
+        let movePoint = CGPointMake(self.dragImage.center.x + p.x, self.dragImage.center.y + p.y)
+        self.dragImage.center = movePoint
+        sender.setTranslation(CGPoint.zero, inView: self.drawingView)
+    }
+    
+    // MARK: color change
+    // TODO: Fixed Animation height
+    @IBAction func color(sender: AnyObject) {
+        if self.palette == nil {
+            self.palette = UINib(nibName: "Palette", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! paletteView
+            self.palette.layer.borderWidth = 2.0
+            self.palette.layer.borderColor = UIColor.blackColor().CGColor
+            self.palette.layer.cornerRadius = 10.0
+            self.palette.frame = CGRectMake(0, self.drawingView.frame.height, self.view.frame.width, self.toolBar.frame.height)
+            self.palette.backgroundColor = UIColor.lightGrayColor()
+            self.palette.delegate = self
+            self.view.addSubview(self.palette)
+            
+            UIView.animateWithDuration(0.5,
+                animations: {() -> Void  in
+                    self.palette.frame.origin.y = self.view.frame.height - self.toolBar.frame.height - self.palette.frame.height
+            })
+        }
+    }
+
     
     func changeDrawColor(tag:Int) {
         switch (tag) {

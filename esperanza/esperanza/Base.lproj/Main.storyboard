@@ -124,24 +124,42 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="7io-4b-eSn" firstAttribute="top" secondItem="NH4-Xh-MMj" secondAttribute="bottom" id="2CS-ok-fcl"/>
                             <constraint firstItem="7io-4b-eSn" firstAttribute="leading" secondItem="ljV-pf-kqt" secondAttribute="leadingMargin" constant="-20" id="4Eg-0L-hC0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="eUX-1d-IxS" secondAttribute="trailing" constant="2" id="5QZ-7y-pCI"/>
                             <constraint firstItem="cYc-D0-hKs" firstAttribute="top" secondItem="7io-4b-eSn" secondAttribute="bottom" id="6fA-Ed-c4x"/>
+                            <constraint firstItem="7io-4b-eSn" firstAttribute="top" secondItem="NH4-Xh-MMj" secondAttribute="bottom" id="8Y3-Hy-Boe"/>
                             <constraint firstItem="7io-4b-eSn" firstAttribute="leading" secondItem="ljV-pf-kqt" secondAttribute="leading" id="A3b-Qf-LWC"/>
+                            <constraint firstItem="7io-4b-eSn" firstAttribute="top" secondItem="NH4-Xh-MMj" secondAttribute="bottom" id="DRz-Qv-zQQ"/>
+                            <constraint firstItem="7io-4b-eSn" firstAttribute="trailing" secondItem="gpK-Rx-0rb" secondAttribute="trailing" id="Eua-nu-GgE"/>
+                            <constraint firstItem="7io-4b-eSn" firstAttribute="width" secondItem="ljV-pf-kqt" secondAttribute="width" id="MR6-d9-78j"/>
+                            <constraint firstItem="7io-4b-eSn" firstAttribute="leading" secondItem="gpK-Rx-0rb" secondAttribute="leading" id="Mm2-7C-0Fi"/>
                             <constraint firstItem="gpK-Rx-0rb" firstAttribute="leading" secondItem="ljV-pf-kqt" secondAttribute="leadingMargin" constant="-20" id="Mtc-Q4-nLU"/>
+                            <constraint firstItem="cYc-D0-hKs" firstAttribute="top" secondItem="7io-4b-eSn" secondAttribute="bottom" id="N18-jq-4LM"/>
                             <constraint firstItem="eUX-1d-IxS" firstAttribute="centerY" secondItem="gpK-Rx-0rb" secondAttribute="centerY" id="NAT-6L-9Ce"/>
                             <constraint firstItem="eUX-1d-IxS" firstAttribute="leading" secondItem="ljV-pf-kqt" secondAttribute="leadingMargin" constant="536" id="NMJ-lL-IUK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="eUX-1d-IxS" secondAttribute="trailing" constant="2" id="Oa6-bA-cVb"/>
+                            <constraint firstItem="7io-4b-eSn" firstAttribute="bottom" secondItem="cYc-D0-hKs" secondAttribute="top" id="P9a-XR-PlP"/>
                             <constraint firstItem="eUX-1d-IxS" firstAttribute="top" secondItem="NH4-Xh-MMj" secondAttribute="bottom" constant="567" id="WDL-rH-jH4"/>
                             <constraint firstItem="cYc-D0-hKs" firstAttribute="top" secondItem="eUX-1d-IxS" secondAttribute="bottom" constant="11" id="Y2c-kf-mMD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gpK-Rx-0rb" secondAttribute="trailing" constant="-20" id="eC5-CE-E9k"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7io-4b-eSn" secondAttribute="trailing" constant="-20" id="f83-1X-MtP"/>
                             <constraint firstItem="cYc-D0-hKs" firstAttribute="top" secondItem="gpK-Rx-0rb" secondAttribute="bottom" id="msI-Df-d4m"/>
+                            <constraint firstItem="7io-4b-eSn" firstAttribute="height" secondItem="ljV-pf-kqt" secondAttribute="height" id="tzF-4l-uod"/>
                             <constraint firstItem="7io-4b-eSn" firstAttribute="top" secondItem="NH4-Xh-MMj" secondAttribute="bottom" id="vYx-kh-5Tg"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="2CS-ok-fcl"/>
+                                <exclude reference="4Eg-0L-hC0"/>
+                                <exclude reference="8Y3-Hy-Boe"/>
                                 <exclude reference="A3b-Qf-LWC"/>
+                                <exclude reference="MR6-d9-78j"/>
+                                <exclude reference="f83-1X-MtP"/>
+                                <exclude reference="tzF-4l-uod"/>
+                                <exclude reference="vYx-kh-5Tg"/>
+                                <exclude reference="6fA-Ed-c4x"/>
+                                <exclude reference="N18-jq-4LM"/>
                                 <exclude reference="Y2c-kf-mMD"/>
                                 <exclude reference="NMJ-lL-IUK"/>
                                 <exclude reference="Oa6-bA-cVb"/>
