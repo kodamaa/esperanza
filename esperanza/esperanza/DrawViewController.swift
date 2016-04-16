@@ -8,15 +8,14 @@
 
 import UIKit
 
-class DrawViewController: UIViewController, paletteViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
-    let toolbarHeight:CGFloat = 60
+class DrawViewController: UIViewController, paletteViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIScrollViewDelegate {
     
     @IBOutlet var drawingView: ACEDrawingView!
     @IBOutlet weak var toolBar: UIToolbar!
     var palette: paletteView!
     var dragImage = UIImageView()
-    var pan = UIPanGestureRecognizer()
+    var beforePoint = CGPointMake(0.0, 0.0)
+    var currentScale:CGFloat = 1.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +46,7 @@ class DrawViewController: UIViewController, paletteViewDelegate, UIImagePickerCo
     
     @IBAction func eraser(sender: AnyObject) {
         self.drawingView.drawTool = ACEDrawingToolTypeEraser
+        self.drawingView.lineWidth = 15.0
     }
     
     @IBAction func showToolBar(sender: AnyObject) {
@@ -60,12 +60,16 @@ class DrawViewController: UIViewController, paletteViewDelegate, UIImagePickerCo
         // fix image position
         self.drawingView.gestureRecognizers?.removeAll()
         self.drawingView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "viewTapped:"))
+        
+        // set image and reset
         if self.dragImage.image != nil {
             // make capture
             let img = self.toImage(self.drawingView)
             self.drawingView.loadImage(img)
             self.dragImage.image = nil
+            self.currentScale = 1.0
         }
+        
         if palette != nil {
             UIView.animateWithDuration(0.5, // アニメーションの時間
                 animations: {() -> Void  in
@@ -84,7 +88,7 @@ class DrawViewController: UIViewController, paletteViewDelegate, UIImagePickerCo
         self.pickImageFromLibrary()
     }
     
-    // 写真を撮ってそれを選択
+    // take picture
     func pickImageFromCamera() {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
             let controller = UIImagePickerController()
@@ -94,7 +98,7 @@ class DrawViewController: UIViewController, paletteViewDelegate, UIImagePickerCo
         }
     }
     
-    // ライブラリから写真を選択する
+    // choose picture from library
     func pickImageFromLibrary() {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
             let controller = UIImagePickerController()
@@ -104,7 +108,7 @@ class DrawViewController: UIViewController, paletteViewDelegate, UIImagePickerCo
         }
     }
     
-    // 写真を選択した時に呼ばれる
+    // After image was chosen
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         if info[UIImagePickerControllerOriginalImage] != nil {
             let image = info[UIImagePickerControllerOriginalImage] as! UIImage
@@ -117,10 +121,12 @@ class DrawViewController: UIViewController, paletteViewDelegate, UIImagePickerCo
             
             self.dragImage = UIImageView(image: resizeImage)
             self.dragImage.userInteractionEnabled = true
-
             self.drawingView.addSubview(self.dragImage)
             
-            pan = UIPanGestureRecognizer.init(target: self, action: "dragAction:")
+            let pinch = UIPinchGestureRecognizer(target: self, action: "pinchAction:")
+            self.drawingView.addGestureRecognizer(pinch)
+            
+            let pan = UIPanGestureRecognizer.init(target: self, action: "dragAction:")
             self.drawingView.addGestureRecognizer(pan)
         }
         picker.dismissViewControllerAnimated(true, completion: nil)
@@ -146,8 +152,30 @@ class DrawViewController: UIViewController, paletteViewDelegate, UIImagePickerCo
         sender.setTranslation(CGPoint.zero, inView: self.drawingView)
     }
     
+    func pinchAction(sender:UIPinchGestureRecognizer) {
+        var scale = sender.scale
+        if self.currentScale > 1.0{
+            scale = self.currentScale + (scale - 1.0)
+        }
+        switch sender.state{
+        case .Changed:
+            let scaleTransform = CGAffineTransformMakeScale(scale, scale)
+            let transitionTransform = CGAffineTransformMakeTranslation(self.beforePoint.x, self.beforePoint.y)
+            self.dragImage.transform = CGAffineTransformConcat(scaleTransform, transitionTransform)
+        case .Ended , .Cancelled:
+            if scale <= 1.0{
+                self.currentScale = 1.0
+                self.dragImage.transform = CGAffineTransformIdentity
+            }else{
+                self.currentScale = scale
+            }
+        default:
+            break
+        }
+    }
+    
     // MARK: color change
-    // TODO: Fixed Animation height
+    // TODO: Fixed change height with animation
     @IBAction func color(sender: AnyObject) {
         if self.palette == nil {
             self.palette = UINib(nibName: "Palette", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! paletteView
@@ -165,7 +193,6 @@ class DrawViewController: UIViewController, paletteViewDelegate, UIImagePickerCo
             })
         }
     }
-
     
     func changeDrawColor(tag:Int) {
         switch (tag) {
