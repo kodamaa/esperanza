@@ -107,7 +107,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="image"/>
                                             <connections>
-                                                <action selector="setImage:" destination="I1x-75-4Uo" eventType="touchUpInside" id="bOe-RB-IMb"/>
+                                                <action selector="selectCameraOrLibrary:" destination="I1x-75-4Uo" eventType="touchUpInside" id="RRI-C9-cDx"/>
                                             </connections>
                                         </button>
                                     </barButtonItem>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DrawViewController: UIViewController, paletteViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIScrollViewDelegate {
+class DrawViewController: UIViewController, paletteViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIScrollViewDelegate, UIActionSheetDelegate {
     
     @IBOutlet var drawingView: ACEDrawingView!
     @IBOutlet weak var toolBar: UIToolbar!
@@ -81,11 +81,32 @@ class DrawViewController: UIViewController, paletteViewDelegate, UIImagePickerCo
     }
     
     // MARK: set image
-    @IBAction func setImage(sender: AnyObject) {
-        // TODO: 実装する
-//        self.pickImageFromCamera()
+    @IBAction func selectCameraOrLibrary(sender: AnyObject) {
+        let alert = UIAlertController(title:nil,
+            message:nil,
+            preferredStyle: UIAlertControllerStyle.Alert)
+        let cancelAction = UIAlertAction(title: "キャンセル",
+            style: UIAlertActionStyle.Cancel,
+            handler:{
+                (action:UIAlertAction!) -> Void in
+        })
+        let takePicture = UIAlertAction(title: "写真を撮る",
+            style: UIAlertActionStyle.Default,
+            handler:{
+                (action:UIAlertAction!) -> Void in
+                self.pickImageFromCamera()
+        })
+        let selectPicture = UIAlertAction(title: "カメラロールから選択する",
+            style: UIAlertActionStyle.Default,
+            handler:{
+                (action:UIAlertAction!) -> Void in
+                self.pickImageFromLibrary()
+        })
         
-        self.pickImageFromLibrary()
+        alert.addAction(cancelAction)
+        alert.addAction(takePicture)
+        alert.addAction(selectPicture)
+        presentViewController(alert, animated: true, completion: nil)
     }
     
     // take picture
