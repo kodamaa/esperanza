@@ -10,7 +10,11 @@ import UIKit
 
 class DrawViewController: UIViewController {
     
+    
     @IBOutlet var drawingView: ACEDrawingView!
+    
+    // 選択された日付の受取用パラメータ
+    var dateParam = NSDate()
     
     override func viewDidLoad() {
         super.viewDidLoad()

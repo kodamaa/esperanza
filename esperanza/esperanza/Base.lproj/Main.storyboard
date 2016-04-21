@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,18 +18,121 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zvB-bK-4BK">
-                                <rect key="frame" x="159" y="106" width="22" height="22"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ktJ-sL-smC" userLabel="Header">
+                                <rect key="frame" x="0.0" y="6" width="600" height="44"/>
+                                <items>
+                                    <navigationItem id="gna-yw-wXO">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="1t0-ZY-gGb" userLabel="Header Prev Btn">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FOE-ys-nf9">
+                                                <rect key="frame" x="20" y="7" width="31" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="prev"/>
+                                                <connections>
+                                                    <action selector="prevTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vPh-rf-fKt"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="wyP-4b-SRd">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AgL-LK-NHy">
+                                                <rect key="frame" x="550" y="7" width="30" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="next"/>
+                                                <connections>
+                                                    <action selector="nextTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yup-iW-ONi"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9mu-zz-9CP">
+                                <rect key="frame" x="0.0" y="58" width="600" height="542"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bRa-4a-6GP">
+                                    <size key="itemSize" width="53" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.29999999999999999" contentMode="center" reuseIdentifier="Cell" id="meF-Jc-bsv" userLabel="cell" customClass="CustomCell" customModule="esperanza" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="53" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="53" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1x-Su-Shv">
+                                                    <rect key="frame" x="1" y="1" width="51" height="48"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="A1x-Su-Shv" firstAttribute="leading" secondItem="meF-Jc-bsv" secondAttribute="leadingMargin" constant="-7" id="X7P-uG-NcL"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="A1x-Su-Shv" secondAttribute="bottom" constant="-7" id="ddH-B7-Icp"/>
+                                            <constraint firstItem="A1x-Su-Shv" firstAttribute="trailing" secondItem="meF-Jc-bsv" secondAttribute="trailingMargin" constant="7" id="iVx-0C-2aY"/>
+                                            <constraint firstItem="A1x-Su-Shv" firstAttribute="top" secondItem="meF-Jc-bsv" secondAttribute="topMargin" constant="-7" id="sMn-yd-qBK"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="label" destination="A1x-Su-Shv" id="Z5E-Ql-LKL"/>
+                                            <segue destination="I1x-75-4Uo" kind="show" identifier="goDrawViewController" id="XPV-W1-dU4"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
                                 <connections>
-                                    <segue destination="I1x-75-4Uo" kind="showDetail" id="xfu-ty-dnT"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="obd-31-0dH"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="z7Q-R4-fFW"/>
                                 </connections>
-                            </button>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vmr-hB-RvH" userLabel="HeaderTitle">
+                                <rect key="frame" x="267" y="0.0" width="67" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="E4h-IT-T8L"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="E4h-IT-T8L"/>
+                                    </mask>
+                                </variation>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vmr-hB-RvH" secondAttribute="bottom" constant="506" id="2qP-TB-Xkf"/>
+                            <constraint firstItem="9mu-zz-9CP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="4Hh-Jr-Nl5"/>
+                            <constraint firstItem="9mu-zz-9CP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="38" id="4dQ-bx-fPK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9mu-zz-9CP" secondAttribute="trailing" constant="-20" id="54u-pS-eYl"/>
+                            <constraint firstItem="ktJ-sL-smC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8WS-eT-mTs"/>
+                            <constraint firstItem="9mu-zz-9CP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="NBk-da-rdi"/>
+                            <constraint firstItem="vmr-hB-RvH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="NSh-oG-gda"/>
+                            <constraint firstItem="vmr-hB-RvH" firstAttribute="centerX" secondItem="ktJ-sL-smC" secondAttribute="centerX" id="PZH-PZ-W63"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9mu-zz-9CP" secondAttribute="bottom" constant="-44" id="T8G-jt-i51"/>
+                            <constraint firstItem="vmr-hB-RvH" firstAttribute="centerY" secondItem="ktJ-sL-smC" secondAttribute="centerY" constant="-3" id="Xpu-db-Hei"/>
+                            <constraint firstItem="ktJ-sL-smC" firstAttribute="trailing" secondItem="9mu-zz-9CP" secondAttribute="trailing" id="Yi4-Hh-Uoh"/>
+                            <constraint firstItem="vmr-hB-RvH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="avN-19-0f7"/>
+                            <constraint firstItem="9mu-zz-9CP" firstAttribute="top" secondItem="vmr-hB-RvH" secondAttribute="bottom" constant="8" id="mZs-7X-1ZB"/>
+                        </constraints>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="CalenderDateCell" destination="9mu-zz-9CP" id="EUA-W2-JxK"/>
+                        <outlet property="calenderCollectionView" destination="9mu-zz-9CP" id="vd3-el-bK9"/>
+                        <outlet property="headerTitle" destination="vmr-hB-RvH" id="R0r-bm-sWl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="397" y="412"/>
         </scene>
         <!--Draw View Controller-->
         <scene sceneID="jYc-6J-Paf">
@@ -56,13 +160,38 @@
                                     <action selector="eraser:" destination="I1x-75-4Uo" eventType="touchUpInside" id="ba8-b9-tip"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vSp-I0-ljF">
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xdZ-gc-jKx">
                                 <rect key="frame" x="291" y="28" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="color:" destination="I1x-75-4Uo" eventType="touchUpInside" id="5jm-Mc-0iH"/>
-                                </connections>
-                            </button>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kIs-2G-alw">
+                                        <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WPv-kk-0tO">
+                                                <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yW3-TA-Un0">
+                                                        <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="E09-p1-AmX">
+                                                                <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vSp-I0-ljF">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                                                        <state key="normal" title="Button"/>
+                                                                        <connections>
+                                                                            <action selector="color:" destination="I1x-75-4Uo" eventType="touchUpInside" id="5jm-Mc-0iH"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZB-XJ-1GE">
                                 <rect key="frame" x="28" y="28" width="30" height="30"/>
                                 <state key="normal" title="pen"/>
@@ -70,6 +199,39 @@
                                     <action selector="pen:" destination="I1x-75-4Uo" eventType="touchUpInside" id="Arj-ur-Vny"/>
                                 </connections>
                             </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AHa-7P-SLy">
+                                <rect key="frame" x="-473" y="168" width="584" height="540"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="G7J-0W-ksa">
+                                    <size key="itemSize" width="75" height="61"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="DsE-eG-ZGv">
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="61"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="75" height="61"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLn-pB-qxx">
+                                                    <rect key="frame" x="16" y="20" width="42" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="XLn-pB-qxx" firstAttribute="centerX" secondItem="DsE-eG-ZGv" secondAttribute="centerX" id="Tiq-h2-ide"/>
+                                            <constraint firstItem="XLn-pB-qxx" firstAttribute="top" secondItem="DsE-eG-ZGv" secondAttribute="topMargin" constant="12" id="U0m-2E-pFE"/>
+                                            <constraint firstItem="XLn-pB-qxx" firstAttribute="centerY" secondItem="DsE-eG-ZGv" secondAttribute="centerY" id="Z3b-Wj-5Oj"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
