@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D17DA4051CBD4082005223E7 /* paletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17DA4041CBD4082005223E7 /* paletteView.swift */; };
+		D17DA4071CBD408A005223E7 /* Palette.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17DA4061CBD408A005223E7 /* Palette.xib */; };
+		D17DA4111CBD412E005223E7 /* black.png in Resources */ = {isa = PBXBuildFile; fileRef = D17DA4091CBD412E005223E7 /* black.png */; };
+		D17DA4121CBD412E005223E7 /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = D17DA40A1CBD412E005223E7 /* blue.png */; };
+		D17DA4131CBD412E005223E7 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = D17DA40B1CBD412E005223E7 /* green.png */; };
+		D17DA4141CBD412E005223E7 /* lightblue.png in Resources */ = {isa = PBXBuildFile; fileRef = D17DA40C1CBD412E005223E7 /* lightblue.png */; };
+		D17DA4151CBD412E005223E7 /* orange.png in Resources */ = {isa = PBXBuildFile; fileRef = D17DA40D1CBD412E005223E7 /* orange.png */; };
+		D17DA4161CBD412E005223E7 /* purple.png in Resources */ = {isa = PBXBuildFile; fileRef = D17DA40E1CBD412E005223E7 /* purple.png */; };
+		D17DA4171CBD412E005223E7 /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = D17DA40F1CBD412E005223E7 /* red.png */; };
+		D17DA4181CBD412E005223E7 /* yelow.png in Resources */ = {isa = PBXBuildFile; fileRef = D17DA4101CBD412E005223E7 /* yelow.png */; };
 		D1B0D5D91CB8F13800109F75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B0D5D81CB8F13800109F75 /* AppDelegate.swift */; };
 		D1B0D5DB1CB8F13800109F75 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B0D5DA1CB8F13800109F75 /* ViewController.swift */; };
 		D1B0D5DE1CB8F13800109F75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1B0D5DC1CB8F13800109F75 /* Main.storyboard */; };
@@ -21,6 +31,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D17DA4041CBD4082005223E7 /* paletteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = paletteView.swift; sourceTree = "<group>"; };
+		D17DA4061CBD408A005223E7 /* Palette.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Palette.xib; sourceTree = "<group>"; };
+		D17DA4091CBD412E005223E7 /* black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = black.png; path = image/black.png; sourceTree = "<group>"; };
+		D17DA40A1CBD412E005223E7 /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blue.png; path = image/blue.png; sourceTree = "<group>"; };
+		D17DA40B1CBD412E005223E7 /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = green.png; path = image/green.png; sourceTree = "<group>"; };
+		D17DA40C1CBD412E005223E7 /* lightblue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lightblue.png; path = image/lightblue.png; sourceTree = "<group>"; };
+		D17DA40D1CBD412E005223E7 /* orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = orange.png; path = image/orange.png; sourceTree = "<group>"; };
+		D17DA40E1CBD412E005223E7 /* purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = purple.png; path = image/purple.png; sourceTree = "<group>"; };
+		D17DA40F1CBD412E005223E7 /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = red.png; path = image/red.png; sourceTree = "<group>"; };
+		D17DA4101CBD412E005223E7 /* yelow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = yelow.png; path = image/yelow.png; sourceTree = "<group>"; };
 		D1B0D5D51CB8F13800109F75 /* esperanza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = esperanza.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1B0D5D81CB8F13800109F75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1B0D5DA1CB8F13800109F75 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,6 +70,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D17DA4081CBD4111005223E7 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				D17DA4091CBD412E005223E7 /* black.png */,
+				D17DA40A1CBD412E005223E7 /* blue.png */,
+				D17DA40B1CBD412E005223E7 /* green.png */,
+				D17DA40C1CBD412E005223E7 /* lightblue.png */,
+				D17DA40D1CBD412E005223E7 /* orange.png */,
+				D17DA40E1CBD412E005223E7 /* purple.png */,
+				D17DA40F1CBD412E005223E7 /* red.png */,
+				D17DA4101CBD412E005223E7 /* yelow.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		D1B0D5CC1CB8F13800109F75 = {
 			isa = PBXGroup;
 			children = (
@@ -69,13 +104,16 @@
 		D1B0D5D71CB8F13800109F75 /* esperanza */ = {
 			isa = PBXGroup;
 			children = (
+				D17DA4081CBD4111005223E7 /* images */,
 				D1B0D5F31CB9331D00109F75 /* Freamwork */,
 				D1B0D5D81CB8F13800109F75 /* AppDelegate.swift */,
 				D1B0D5DA1CB8F13800109F75 /* ViewController.swift */,
 				D1B0D5FC1CB93DB000109F75 /* DrawViewController.swift */,
+				D17DA4041CBD4082005223E7 /* paletteView.swift */,
 				D1B0D5DC1CB8F13800109F75 /* Main.storyboard */,
 				D1B0D5F11CB9045700109F75 /* CanvasView.xib */,
 				EC6D07FB1CBFE1A30000A488 /* customCell.swift */,
+				D17DA4061CBD408A005223E7 /* Palette.xib */,
 				D1B0D5E21CB8F13800109F75 /* Assets.xcassets */,
 				D1B0D5E41CB8F13800109F75 /* LaunchScreen.storyboard */,
 				D1B0D5E71CB8F13800109F75 /* Info.plist */,
@@ -163,10 +201,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D17DA4161CBD412E005223E7 /* purple.png in Resources */,
 				D1B0D5E61CB8F13800109F75 /* LaunchScreen.storyboard in Resources */,
+				D17DA4141CBD412E005223E7 /* lightblue.png in Resources */,
 				D1B0D5E31CB8F13800109F75 /* Assets.xcassets in Resources */,
+				D17DA4181CBD412E005223E7 /* yelow.png in Resources */,
+				D17DA4151CBD412E005223E7 /* orange.png in Resources */,
 				D1B0D5F21CB9045700109F75 /* CanvasView.xib in Resources */,
 				D1B0D5DE1CB8F13800109F75 /* Main.storyboard in Resources */,
+				D17DA4071CBD408A005223E7 /* Palette.xib in Resources */,
+				D17DA4131CBD412E005223E7 /* green.png in Resources */,
+				D17DA4171CBD412E005223E7 /* red.png in Resources */,
+				D17DA4121CBD412E005223E7 /* blue.png in Resources */,
+				D17DA4111CBD412E005223E7 /* black.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D17DA4051CBD4082005223E7 /* paletteView.swift in Sources */,
 				D1B0D5FD1CB93DB000109F75 /* DrawViewController.swift in Sources */,
 				D1B0D5FB1CB9343100109F75 /* ACEDrawingView.m in Sources */,
 				EC6D07FC1CBFE1A30000A488 /* customCell.swift in Sources */,
@@ -300,6 +348,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = esperanza/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xxx.esperanza;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -317,6 +366,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = esperanza/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xxx.esperanza;
 				PRODUCT_NAME = "$(TARGET_NAME)";
