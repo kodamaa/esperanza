@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 extension UIColor {
     class func lightBlue() -> UIColor {
         return UIColor(red: 92.0 / 255, green: 192.0 / 255, blue: 210.0 / 255, alpha: 1.0)
@@ -45,7 +44,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         //calenderCollectionView.backgroundColor = UIColor.whiteColor()
     }
 
-    
     // 先月押下時のアクション
     @IBAction func prevTap(sender: AnyObject) {
         let calendar = NSCalendar.currentCalendar()
@@ -61,6 +59,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         // view を更新する
         self.CalenderDateCell.reloadData()
     }
+    
     // 次月押下時のアクション
     @IBAction func nextTap(sender: AnyObject) {
         let calendar = NSCalendar.currentCalendar()
@@ -75,8 +74,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         // view を更新する
         self.CalenderDateCell.reloadData()
     }
-    
-    
     
     // その月の初日を返す
     func firstDateOfMonth() -> NSDate {
@@ -173,16 +170,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         selectedDate = self.dateForCellAtIndexPath(indexPath)
-      //  var DrawViewController = segue.destinationViewController as! DrawViewController
-  //      performSegueWithIdentifier("DrawViewController",sender: nil)
-        
     }
+    
      // 画面遷移
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
         let drawViewController = segue.destinationViewController as! DrawViewController
         drawViewController.dateParam = self.selectedDate
-        //drawViewController.dateParam = self.dateForCellAtIndexPath(indexPath)
-        //drawViewController.dateParam = self.dateForCellAtIndexPath(10)
     }
     
     override func didReceiveMemoryWarning() {
@@ -190,6 +183,3 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         // Dispose of any resources that can be recreated.
     }
 }
-
-
-
