@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -45,8 +45,22 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vmr-hB-RvH" userLabel="HeaderTitle">
+                                <rect key="frame" x="279" y="0.0" width="42" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="E4h-IT-T8L"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="E4h-IT-T8L"/>
+                                    </mask>
+                                </variation>
+                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9mu-zz-9CP">
-                                <rect key="frame" x="0.0" y="58" width="600" height="542"/>
+                                <rect key="frame" x="0.0" y="52" width="600" height="542"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bRa-4a-6GP">
                                     <size key="itemSize" width="53" height="50"/>
@@ -62,7 +76,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="53" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1x-Su-Shv">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1x-Su-Shv">
                                                     <rect key="frame" x="1" y="1" width="51" height="48"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -90,36 +104,22 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="z7Q-R4-fFW"/>
                                 </connections>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vmr-hB-RvH" userLabel="HeaderTitle">
-                                <rect key="frame" x="279" y="0.0" width="42" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="E4h-IT-T8L"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="E4h-IT-T8L"/>
-                                    </mask>
-                                </variation>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vmr-hB-RvH" secondAttribute="bottom" constant="506" id="2qP-TB-Xkf"/>
                             <constraint firstItem="9mu-zz-9CP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="4Hh-Jr-Nl5"/>
-                            <constraint firstItem="9mu-zz-9CP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="38" id="4dQ-bx-fPK"/>
+                            <constraint firstItem="9mu-zz-9CP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="32" id="4dQ-bx-fPK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9mu-zz-9CP" secondAttribute="trailing" constant="-20" id="54u-pS-eYl"/>
                             <constraint firstItem="ktJ-sL-smC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8WS-eT-mTs"/>
                             <constraint firstItem="9mu-zz-9CP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="NBk-da-rdi"/>
                             <constraint firstItem="vmr-hB-RvH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="NSh-oG-gda"/>
                             <constraint firstItem="vmr-hB-RvH" firstAttribute="centerX" secondItem="ktJ-sL-smC" secondAttribute="centerX" id="PZH-PZ-W63"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9mu-zz-9CP" secondAttribute="bottom" constant="-44" id="T8G-jt-i51"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9mu-zz-9CP" secondAttribute="bottom" constant="-38" id="T8G-jt-i51"/>
                             <constraint firstItem="vmr-hB-RvH" firstAttribute="centerY" secondItem="ktJ-sL-smC" secondAttribute="centerY" constant="-3" id="Xpu-db-Hei"/>
                             <constraint firstItem="ktJ-sL-smC" firstAttribute="trailing" secondItem="9mu-zz-9CP" secondAttribute="trailing" id="Yi4-Hh-Uoh"/>
                             <constraint firstItem="vmr-hB-RvH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="avN-19-0f7"/>
-                            <constraint firstItem="9mu-zz-9CP" firstAttribute="top" secondItem="vmr-hB-RvH" secondAttribute="bottom" constant="8" id="mZs-7X-1ZB"/>
+                            <constraint firstItem="9mu-zz-9CP" firstAttribute="top" secondItem="vmr-hB-RvH" secondAttribute="bottom" constant="2" id="mZs-7X-1ZB"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -253,14 +253,14 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="rYW-vG-twy"/>
-                                <exclude reference="Vow-xh-vzX"/>
-                                <exclude reference="Son-Ly-IVg"/>
-                                <exclude reference="qsX-ja-Y9p"/>
-                                <exclude reference="zwA-Xr-zgo"/>
-                                <exclude reference="cbs-eb-V3B"/>
                                 <exclude reference="4XX-uB-2Ri"/>
                                 <exclude reference="6T0-Fq-xDU"/>
+                                <exclude reference="Son-Ly-IVg"/>
+                                <exclude reference="Vow-xh-vzX"/>
+                                <exclude reference="cbs-eb-V3B"/>
+                                <exclude reference="qsX-ja-Y9p"/>
+                                <exclude reference="rYW-vG-twy"/>
+                                <exclude reference="zwA-Xr-zgo"/>
                                 <exclude reference="89l-f1-eGg"/>
                                 <exclude reference="G8g-Re-S5m"/>
                                 <exclude reference="unA-t8-LS8"/>
