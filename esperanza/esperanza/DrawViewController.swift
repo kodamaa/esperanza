@@ -25,9 +25,6 @@ class DrawViewController: UIViewController, paletteViewDelegate, UIImagePickerCo
         self.drawingView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(DrawViewController.viewTapped(_:))))
         self.drawingView.lineWidth = 3.0
         
-        // FIXME: アニメーションにしたい
-        self.toolBar.hidden = true
-        
         let image = loadImageDataFromRealm()
         // imageで渡すとサイズがおかしくなるためdata形式で渡している
         drawingView.loadImageData(image)
@@ -61,13 +58,7 @@ class DrawViewController: UIViewController, paletteViewDelegate, UIImagePickerCo
         self.drawingView.lineWidth = 15.0
     }
     
-    @IBAction func showToolBar(sender: AnyObject) {
-        self.toolBar.hidden = false
-    }
-    
     func viewTapped(sender: UITapGestureRecognizer) {
-        self.toolBar.hidden = true
-        
         // FIXME: panGestureのみをremoveできなかったため、全部消して必要なものだけ再度addしている
         // fix image position
         self.drawingView.gestureRecognizers?.removeAll()
