@@ -175,7 +175,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
      // 画面遷移
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
         let drawViewController = segue.destinationViewController as! DrawViewController
-        drawViewController.dateParam = self.selectedDate
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy/MM/dd"
+        // DBへは日付の文字列で保存する
+        drawViewController.dateParam = dateFormatter.stringFromDate(self.selectedDate)
     }
     
     override func didReceiveMemoryWarning() {
