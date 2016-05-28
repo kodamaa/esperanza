@@ -27,10 +27,10 @@ class DrawViewController: UIViewController, paletteViewDelegate, UIImagePickerCo
         
         // FIXME: アニメーションにしたい
         self.toolBar.hidden = true
-        //        self.navigationController?.setToolbarHidden(false, animated: false)
         
-        let image = loadImageFromRealm()
-        drawingView.loadImage(image)
+        let image = loadImageDataFromRealm()
+        // imageで渡すとサイズがおかしくなるためdata形式で渡している
+        drawingView.loadImageData(image)
     }
     
     override func didReceiveMemoryWarning() {
@@ -271,9 +271,9 @@ class DrawViewController: UIViewController, paletteViewDelegate, UIImagePickerCo
         instance.saveImageToDB(image, date: self.dateParam)
     }
     
-    func loadImageFromRealm() -> UIImage {
+    func loadImageDataFromRealm() -> NSData {
         let instance = realmModel()
-        let image = instance.loadImageFromDB(self.dateParam)
+        let image = instance.loadImageDataFromDB(self.dateParam)
         return image
     }
 }

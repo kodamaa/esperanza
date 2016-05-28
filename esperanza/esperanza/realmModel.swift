@@ -12,16 +12,15 @@ import RealmSwift
 class realmModel {
     let realm = try! Realm()
     
-    func loadImageFromDB(dateString:String) -> UIImage {
+    func loadImageDataFromDB(dateString:String) -> NSData {
         let predicate = NSPredicate(format: "day = %@ ", dateString)
         // Result object はコレクション形式
         let query = realm.objects(CanvasData).filter(predicate)
         if ((query.first?.imageData) != nil) {
-            let image = UIImage(data: (query.first?.imageData)!)
-            return image!
+            return (query.first?.imageData)!
         }
         else {
-            return UIImage()
+            return NSData()
         }
     }
     
