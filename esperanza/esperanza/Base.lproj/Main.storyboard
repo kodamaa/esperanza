@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -9,7 +9,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="esperanza" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="calenderView" id="BYZ-38-t0r" customClass="ViewController" customModule="esperanza" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -51,7 +51,7 @@
                                     <constraint firstAttribute="width" constant="60" id="E4h-IT-T8L"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -80,7 +80,7 @@
                                                     <rect key="frame" x="1" y="1" width="51" height="48"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -148,14 +148,22 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OeC-eE-NBN" customClass="ACEDrawingView">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z1h-zy-Fcd">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <items>
+                                            <navigationItem title="Title" id="Yka-gK-mun">
+                                                <barButtonItem key="leftBarButtonItem" title="Item" id="1de-Cy-swh">
+                                                    <connections>
+                                                        <action selector="backToCalender:" destination="26U-AP-1Ot" id="Wbk-I7-96D"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                            </navigationItem>
+                                        </items>
+                                    </navigationBar>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rd-2w-LeB" userLabel="showToolBarButton">
-                                <rect key="frame" x="556" y="567" width="22" height="22"/>
-                                <connections>
-                                    <action selector="showToolBar:" destination="26U-AP-1Ot" eventType="touchUpInside" id="wFo-bB-vaQ"/>
-                                </connections>
-                            </button>
                             <toolbar clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AKG-y9-cXM">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <color key="backgroundColor" red="0.44154434970000001" green="0.44154434970000001" blue="0.44154434970000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -230,16 +238,12 @@
                             <constraint firstItem="OeC-eE-NBN" firstAttribute="height" secondItem="Skl-Cs-JQl" secondAttribute="height" id="4XX-uB-2Ri"/>
                             <constraint firstItem="OeC-eE-NBN" firstAttribute="top" secondItem="ahM-uj-455" secondAttribute="bottom" id="6T0-Fq-xDU"/>
                             <constraint firstItem="Qq6-3m-aBb" firstAttribute="top" secondItem="OeC-eE-NBN" secondAttribute="bottom" id="89l-f1-eGg"/>
-                            <constraint firstItem="8rd-2w-LeB" firstAttribute="leading" secondItem="Skl-Cs-JQl" secondAttribute="leadingMargin" constant="536" id="A9v-Tm-pfY"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="8rd-2w-LeB" secondAttribute="trailing" constant="2" id="BDg-6M-eMc"/>
                             <constraint firstItem="Qq6-3m-aBb" firstAttribute="top" secondItem="OeC-eE-NBN" secondAttribute="bottom" id="G8g-Re-S5m"/>
                             <constraint firstAttribute="trailingMargin" secondItem="AKG-y9-cXM" secondAttribute="trailing" constant="-20" id="J9C-zJ-CAj"/>
-                            <constraint firstItem="8rd-2w-LeB" firstAttribute="top" secondItem="ahM-uj-455" secondAttribute="bottom" constant="567" id="K9c-Kd-1Ew"/>
                             <constraint firstItem="Qq6-3m-aBb" firstAttribute="top" secondItem="AKG-y9-cXM" secondAttribute="bottom" id="NB0-pw-3mP"/>
                             <constraint firstItem="OeC-eE-NBN" firstAttribute="leading" secondItem="AKG-y9-cXM" secondAttribute="leading" id="SRg-Ah-Tpi"/>
                             <constraint firstItem="OeC-eE-NBN" firstAttribute="top" secondItem="ahM-uj-455" secondAttribute="bottom" id="Son-Ly-IVg"/>
                             <constraint firstItem="OeC-eE-NBN" firstAttribute="leading" secondItem="Skl-Cs-JQl" secondAttribute="leadingMargin" constant="-20" id="Vow-xh-vzX"/>
-                            <constraint firstItem="8rd-2w-LeB" firstAttribute="centerY" secondItem="AKG-y9-cXM" secondAttribute="centerY" id="Y3z-5h-ziH"/>
                             <constraint firstItem="OeC-eE-NBN" firstAttribute="bottom" secondItem="Qq6-3m-aBb" secondAttribute="top" id="ZT0-dA-R3N"/>
                             <constraint firstItem="OeC-eE-NBN" firstAttribute="trailing" secondItem="AKG-y9-cXM" secondAttribute="trailing" id="ZrY-EH-cS8"/>
                             <constraint firstAttribute="trailingMargin" secondItem="OeC-eE-NBN" secondAttribute="trailing" constant="-20" id="cbs-eb-V3B"/>
@@ -247,8 +251,6 @@
                             <constraint firstItem="OeC-eE-NBN" firstAttribute="leading" secondItem="Skl-Cs-JQl" secondAttribute="leading" id="qsX-ja-Y9p"/>
                             <constraint firstItem="OeC-eE-NBN" firstAttribute="top" secondItem="ahM-uj-455" secondAttribute="bottom" id="rYW-vG-twy"/>
                             <constraint firstItem="AKG-y9-cXM" firstAttribute="leading" secondItem="Skl-Cs-JQl" secondAttribute="leadingMargin" constant="-20" id="rpe-uL-2Wg"/>
-                            <constraint firstItem="Qq6-3m-aBb" firstAttribute="top" secondItem="8rd-2w-LeB" secondAttribute="bottom" constant="11" id="unA-t8-LS8"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="8rd-2w-LeB" secondAttribute="trailing" constant="2" id="zmb-yc-Vku"/>
                             <constraint firstItem="OeC-eE-NBN" firstAttribute="width" secondItem="Skl-Cs-JQl" secondAttribute="width" id="zwA-Xr-zgo"/>
                         </constraints>
                         <variation key="default">
@@ -263,10 +265,6 @@
                                 <exclude reference="zwA-Xr-zgo"/>
                                 <exclude reference="89l-f1-eGg"/>
                                 <exclude reference="G8g-Re-S5m"/>
-                                <exclude reference="unA-t8-LS8"/>
-                                <exclude reference="A9v-Tm-pfY"/>
-                                <exclude reference="BDg-6M-eMc"/>
-                                <exclude reference="K9c-Kd-1Ew"/>
                             </mask>
                         </variation>
                     </view>

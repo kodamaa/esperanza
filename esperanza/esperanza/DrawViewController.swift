@@ -10,7 +10,6 @@ import UIKit
 
 class DrawViewController: UIViewController, paletteViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIScrollViewDelegate, UIActionSheetDelegate {
     
-    
     @IBOutlet var drawingView: ACEDrawingView!
     @IBOutlet weak var toolBar: UIToolbar!
     var palette: paletteView!
@@ -19,16 +18,16 @@ class DrawViewController: UIViewController, paletteViewDelegate, UIImagePickerCo
     var currentScale:CGFloat = 1.0
     
     // 選択された日付の受取用パラメータ
-    var dateParam = NSDate()
+    var dateParam = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.drawingView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "viewTapped:"))
+        self.drawingView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(DrawViewController.viewTapped(_:))))
         self.drawingView.lineWidth = 3.0
         
-        // FIXME: アニメーションにしたい
-        self.toolBar.hidden = true
-        //        self.navigationController?.setToolbarHidden(false, animated: false)
+        let image = loadImageDataFromRealm()
+        // imageで渡すとサイズがおかしくなるためdata形式で渡している
+        drawingView.loadImageData(image)
     }
     
     override func didReceiveMemoryWarning() {
@@ -36,6 +35,12 @@ class DrawViewController: UIViewController, paletteViewDelegate, UIImagePickerCo
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func backToCalender(sender: AnyObject) {
+        saveImageToRealm(drawingView.image)
+        // move page
+        let calenderViewController = self.storyboard?.instantiateViewControllerWithIdentifier("calenderView") as! ViewController
+        self.presentViewController(calenderViewController, animated: true, completion: nil)
+    }
     @IBAction func pen(sender: AnyObject) {
         self.drawingView.drawTool = ACEDrawingToolTypePen
         self.drawingView.lineWidth = 3.0
@@ -53,17 +58,11 @@ class DrawViewController: UIViewController, paletteViewDelegate, UIImagePickerCo
         self.drawingView.lineWidth = 15.0
     }
     
-    @IBAction func showToolBar(sender: AnyObject) {
-        self.toolBar.hidden = false
-    }
-    
     func viewTapped(sender: UITapGestureRecognizer) {
-        self.toolBar.hidden = true
-        
         // FIXME: panGestureのみをremoveできなかったため、全部消して必要なものだけ再度addしている
         // fix image position
         self.drawingView.gestureRecognizers?.removeAll()
-        self.drawingView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "viewTapped:"))
+        self.drawingView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(DrawViewController.viewTapped(_:))))
         
         // set image and reset
         if self.dragImage.image != nil {
@@ -148,10 +147,10 @@ class DrawViewController: UIViewController, paletteViewDelegate, UIImagePickerCo
             self.dragImage.userInteractionEnabled = true
             self.drawingView.addSubview(self.dragImage)
             
-            let pinch = UIPinchGestureRecognizer(target: self, action: "pinchAction:")
+            let pinch = UIPinchGestureRecognizer(target: self, action: #selector(DrawViewController.pinchAction(_:)))
             self.drawingView.addGestureRecognizer(pinch)
             
-            let pan = UIPanGestureRecognizer.init(target: self, action: "dragAction:")
+            let pan = UIPanGestureRecognizer.init(target: self, action: #selector(DrawViewController.dragAction(_:)))
             self.drawingView.addGestureRecognizer(pan)
         }
         picker.dismissViewControllerAnimated(true, completion: nil)
@@ -255,5 +254,17 @@ class DrawViewController: UIViewController, paletteViewDelegate, UIImagePickerCo
             self.drawingView.lineColor = UIColor.blackColor()
             break;
         }
+    }
+    
+    // MARK: Realm
+    func saveImageToRealm(image:UIImage) {
+        let instance = realmModel()
+        instance.saveImageToDB(image, date: self.dateParam)
+    }
+    
+    func loadImageDataFromRealm() -> NSData {
+        let instance = realmModel()
+        let image = instance.loadImageDataFromDB(self.dateParam)
+        return image
     }
 }

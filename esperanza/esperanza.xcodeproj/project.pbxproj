@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D1422B7F1CF98A29001206A6 /* realmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1422B7E1CF98A29001206A6 /* realmModel.swift */; };
 		D17DA4051CBD4082005223E7 /* paletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17DA4041CBD4082005223E7 /* paletteView.swift */; };
 		D17DA4071CBD408A005223E7 /* Palette.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17DA4061CBD408A005223E7 /* Palette.xib */; };
 		D17DA4111CBD412E005223E7 /* black.png in Resources */ = {isa = PBXBuildFile; fileRef = D17DA4091CBD412E005223E7 /* black.png */; };
@@ -27,10 +28,43 @@
 		D1B0D5FA1CB9343100109F75 /* ACEDrawingTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B0D5F71CB9343100109F75 /* ACEDrawingTools.m */; };
 		D1B0D5FB1CB9343100109F75 /* ACEDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B0D5F91CB9343100109F75 /* ACEDrawingView.m */; };
 		D1B0D5FD1CB93DB000109F75 /* DrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B0D5FC1CB93DB000109F75 /* DrawViewController.swift */; };
+		D1D507D11CF1C55300CA8BF0 /* CanvasData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D507D01CF1C55300CA8BF0 /* CanvasData.swift */; };
+		D1E1CF3B1CF054440076B43A /* esperanzalib.h in Headers */ = {isa = PBXBuildFile; fileRef = D1E1CF3A1CF054440076B43A /* esperanzalib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D1E1CF3F1CF054440076B43A /* esperanzalib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1E1CF381CF054440076B43A /* esperanzalib.framework */; };
+		D1E1CF401CF054440076B43A /* esperanzalib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D1E1CF381CF054440076B43A /* esperanzalib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D1E1CF471CF055470076B43A /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D1E1CF451CF055470076B43A /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D1E1CF481CF055470076B43A /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D1E1CF461CF055470076B43A /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EC6D07FC1CBFE1A30000A488 /* customCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6D07FB1CBFE1A30000A488 /* customCell.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D1E1CF3D1CF054440076B43A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1B0D5CD1CB8F13800109F75 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1E1CF371CF054440076B43A;
+			remoteInfo = esperanzalib;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D1E1CF441CF054440076B43A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D1E1CF401CF054440076B43A /* esperanzalib.framework in Embed Frameworks */,
+				D1E1CF471CF055470076B43A /* Realm.framework in Embed Frameworks */,
+				D1E1CF481CF055470076B43A /* RealmSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		D1422B7E1CF98A29001206A6 /* realmModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = realmModel.swift; sourceTree = "<group>"; };
 		D17DA4041CBD4082005223E7 /* paletteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = paletteView.swift; sourceTree = "<group>"; };
 		D17DA4061CBD408A005223E7 /* Palette.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Palette.xib; sourceTree = "<group>"; };
 		D17DA4091CBD412E005223E7 /* black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = black.png; path = image/black.png; sourceTree = "<group>"; };
@@ -56,11 +90,27 @@
 		D1B0D5F81CB9343100109F75 /* ACEDrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACEDrawingView.h; sourceTree = "<group>"; };
 		D1B0D5F91CB9343100109F75 /* ACEDrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACEDrawingView.m; sourceTree = "<group>"; };
 		D1B0D5FC1CB93DB000109F75 /* DrawViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawViewController.swift; sourceTree = "<group>"; };
+		D1D507D01CF1C55300CA8BF0 /* CanvasData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanvasData.swift; sourceTree = "<group>"; };
+		D1E1CF381CF054440076B43A /* esperanzalib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = esperanzalib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1E1CF3A1CF054440076B43A /* esperanzalib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = esperanzalib.h; sourceTree = "<group>"; };
+		D1E1CF3C1CF054440076B43A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1E1CF451CF055470076B43A /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		D1E1CF461CF055470076B43A /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		D1E1CF4B1CF0597D0076B43A /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "../../../Downloads/realm-swift-0.103.1/ios/swift-2.2/Realm.framework"; sourceTree = "<group>"; };
+		D1E1CF4C1CF0597D0076B43A /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "../../../Downloads/realm-swift-0.103.1/ios/swift-2.2/RealmSwift.framework"; sourceTree = "<group>"; };
 		EC6D07FB1CBFE1A30000A488 /* customCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D1B0D5D21CB8F13800109F75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1E1CF3F1CF054440076B43A /* esperanzalib.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1E1CF341CF054440076B43A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -89,6 +139,8 @@
 			isa = PBXGroup;
 			children = (
 				D1B0D5D71CB8F13800109F75 /* esperanza */,
+				D1E1CF391CF054440076B43A /* esperanzalib */,
+				D1D507CF1CF1C50400CA8BF0 /* libraly */,
 				D1B0D5D61CB8F13800109F75 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -97,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				D1B0D5D51CB8F13800109F75 /* esperanza.app */,
+				D1E1CF381CF054440076B43A /* esperanzalib.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -107,12 +160,14 @@
 				D17DA4081CBD4111005223E7 /* images */,
 				D1B0D5F31CB9331D00109F75 /* Freamwork */,
 				D1B0D5D81CB8F13800109F75 /* AppDelegate.swift */,
+				D1D507D01CF1C55300CA8BF0 /* CanvasData.swift */,
 				D1B0D5DA1CB8F13800109F75 /* ViewController.swift */,
 				D1B0D5FC1CB93DB000109F75 /* DrawViewController.swift */,
+				D1422B7E1CF98A29001206A6 /* realmModel.swift */,
 				D17DA4041CBD4082005223E7 /* paletteView.swift */,
+				EC6D07FB1CBFE1A30000A488 /* customCell.swift */,
 				D1B0D5DC1CB8F13800109F75 /* Main.storyboard */,
 				D1B0D5F11CB9045700109F75 /* CanvasView.xib */,
-				EC6D07FB1CBFE1A30000A488 /* customCell.swift */,
 				D17DA4061CBD408A005223E7 /* Palette.xib */,
 				D1B0D5E21CB8F13800109F75 /* Assets.xcassets */,
 				D1B0D5E41CB8F13800109F75 /* LaunchScreen.storyboard */,
@@ -142,7 +197,38 @@
 			name = ACEDrawingView;
 			sourceTree = "<group>";
 		};
+		D1D507CF1CF1C50400CA8BF0 /* libraly */ = {
+			isa = PBXGroup;
+			children = (
+				D1E1CF4B1CF0597D0076B43A /* Realm.framework */,
+				D1E1CF4C1CF0597D0076B43A /* RealmSwift.framework */,
+				D1E1CF451CF055470076B43A /* Realm.framework */,
+				D1E1CF461CF055470076B43A /* RealmSwift.framework */,
+			);
+			name = libraly;
+			sourceTree = "<group>";
+		};
+		D1E1CF391CF054440076B43A /* esperanzalib */ = {
+			isa = PBXGroup;
+			children = (
+				D1E1CF3A1CF054440076B43A /* esperanzalib.h */,
+				D1E1CF3C1CF054440076B43A /* Info.plist */,
+			);
+			path = esperanzalib;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D1E1CF351CF054440076B43A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1E1CF3B1CF054440076B43A /* esperanzalib.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		D1B0D5D41CB8F13800109F75 /* esperanza */ = {
@@ -152,15 +238,35 @@
 				D1B0D5D11CB8F13800109F75 /* Sources */,
 				D1B0D5D21CB8F13800109F75 /* Frameworks */,
 				D1B0D5D31CB8F13800109F75 /* Resources */,
+				D1E1CF441CF054440076B43A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D1E1CF3E1CF054440076B43A /* PBXTargetDependency */,
 			);
 			name = esperanza;
 			productName = esperanza;
 			productReference = D1B0D5D51CB8F13800109F75 /* esperanza.app */;
 			productType = "com.apple.product-type.application";
+		};
+		D1E1CF371CF054440076B43A /* esperanzalib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1E1CF431CF054440076B43A /* Build configuration list for PBXNativeTarget "esperanzalib" */;
+			buildPhases = (
+				D1E1CF331CF054440076B43A /* Sources */,
+				D1E1CF341CF054440076B43A /* Frameworks */,
+				D1E1CF351CF054440076B43A /* Headers */,
+				D1E1CF361CF054440076B43A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = esperanzalib;
+			productName = esperanzalib;
+			productReference = D1E1CF381CF054440076B43A /* esperanzalib.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -173,6 +279,10 @@
 				ORGANIZATIONNAME = tokonatsutan;
 				TargetAttributes = {
 					D1B0D5D41CB8F13800109F75 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = M7D8HT2Y87;
+					};
+					D1E1CF371CF054440076B43A = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = M7D8HT2Y87;
 					};
@@ -192,6 +302,7 @@
 			projectRoot = "";
 			targets = (
 				D1B0D5D41CB8F13800109F75 /* esperanza */,
+				D1E1CF371CF054440076B43A /* esperanzalib */,
 			);
 		};
 /* End PBXProject section */
@@ -217,6 +328,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D1E1CF361CF054440076B43A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -227,15 +345,32 @@
 				D17DA4051CBD4082005223E7 /* paletteView.swift in Sources */,
 				D1B0D5FD1CB93DB000109F75 /* DrawViewController.swift in Sources */,
 				D1B0D5FB1CB9343100109F75 /* ACEDrawingView.m in Sources */,
+				D1422B7F1CF98A29001206A6 /* realmModel.swift in Sources */,
 				EC6D07FC1CBFE1A30000A488 /* customCell.swift in Sources */,
 				D1B0D5FA1CB9343100109F75 /* ACEDrawingTools.m in Sources */,
+				D1D507D11CF1C55300CA8BF0 /* CanvasData.swift in Sources */,
 				D1B0D5DB1CB8F13800109F75 /* ViewController.swift in Sources */,
 				D1B0D5D91CB8F13800109F75 /* AppDelegate.swift in Sources */,
 				D1B0D5E11CB8F13800109F75 /* esperanza.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D1E1CF331CF054440076B43A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D1E1CF3E1CF054440076B43A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D1E1CF371CF054440076B43A /* esperanzalib */;
+			targetProxy = D1E1CF3D1CF054440076B43A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D1B0D5DC1CB8F13800109F75 /* Main.storyboard */ = {
@@ -347,6 +482,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = esperanza/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -365,6 +504,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = esperanza/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -372,6 +515,48 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "esperanza/esperanza-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		D1E1CF411CF054440076B43A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = esperanzalib/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xxx.esperanzalib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D1E1CF421CF054440076B43A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = esperanzalib/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xxx.esperanzalib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -392,6 +577,15 @@
 			buildConfigurations = (
 				D1B0D5EB1CB8F13800109F75 /* Debug */,
 				D1B0D5EC1CB8F13800109F75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1E1CF431CF054440076B43A /* Build configuration list for PBXNativeTarget "esperanzalib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1E1CF411CF054440076B43A /* Debug */,
+				D1E1CF421CF054440076B43A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

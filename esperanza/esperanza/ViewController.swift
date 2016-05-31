@@ -168,6 +168,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         return cellMargin
     }
     
+    // NOTE:didSelectItemAtIndexPathが呼ばれるより先に画面遷移するため、選択日を渡すためにこのタイミングで日付をセット
+    func collectionView(collectionView: UICollectionView, shouldSelectItemAtIndexPath indexPath: NSIndexPath) -> Bool {
+        selectedDate = self.dateForCellAtIndexPath(indexPath)
+        return true
+    }
+    
+    // 不要？
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         selectedDate = self.dateForCellAtIndexPath(indexPath)
     }
@@ -175,7 +182,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
      // 画面遷移
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
         let drawViewController = segue.destinationViewController as! DrawViewController
-        drawViewController.dateParam = self.selectedDate
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy/MM/dd"
+        // DBへは日付の文字列で保存するため変換して渡す
+        drawViewController.dateParam = dateFormatter.stringFromDate(self.selectedDate)
     }
     
     override func didReceiveMemoryWarning() {
