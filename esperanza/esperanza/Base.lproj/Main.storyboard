@@ -151,16 +151,14 @@
                                 <subviews>
                                     <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z1h-zy-Fcd">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                        <items>
-                                            <navigationItem title="Title" id="Yka-gK-mun">
-                                                <barButtonItem key="leftBarButtonItem" title="Item" id="1de-Cy-swh">
-                                                    <connections>
-                                                        <action selector="backToCalender:" destination="26U-AP-1Ot" id="Wbk-I7-96D"/>
-                                                    </connections>
-                                                </barButtonItem>
-                                            </navigationItem>
-                                        </items>
                                     </navigationBar>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C4o-fu-Nru">
+                                        <rect key="frame" x="18" y="8" width="36" height="30"/>
+                                        <state key="normal" backgroundImage="1calendar.png"/>
+                                        <connections>
+                                            <action selector="backToCalender:" destination="26U-AP-1Ot" eventType="touchUpInside" id="RYN-ea-55f"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -172,7 +170,7 @@
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5bH-LX-eck">
                                             <rect key="frame" x="20" y="7" width="35" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="pen"/>
+                                            <state key="normal" backgroundImage="pen-3.png"/>
                                             <connections>
                                                 <action selector="pen:" destination="26U-AP-1Ot" eventType="touchUpInside" id="kKS-Xi-ARF"/>
                                             </connections>
@@ -183,7 +181,7 @@
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0My-Og-2eU">
                                             <rect key="frame" x="125" y="7" width="35" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="line"/>
+                                            <state key="normal" backgroundImage="highlighter-1.png"/>
                                             <connections>
                                                 <action selector="line:" destination="26U-AP-1Ot" eventType="touchUpInside" id="q2D-0b-lqr"/>
                                             </connections>
@@ -194,7 +192,7 @@
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="86a-LF-sWI">
                                             <rect key="frame" x="230" y="7" width="35" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="eraser"/>
+                                            <state key="normal" backgroundImage="eraser.png"/>
                                             <connections>
                                                 <action selector="eraser:" destination="26U-AP-1Ot" eventType="touchUpInside" id="wHw-WA-rmy"/>
                                             </connections>
@@ -205,7 +203,7 @@
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="P3p-15-vJM">
                                             <rect key="frame" x="335" y="7" width="35" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="color"/>
+                                            <state key="normal" backgroundImage="paint-palette.png"/>
                                             <connections>
                                                 <action selector="color:" destination="26U-AP-1Ot" eventType="touchUpInside" id="hFi-lM-6zv"/>
                                             </connections>
@@ -216,7 +214,7 @@
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jSI-ob-uaL">
                                             <rect key="frame" x="440" y="7" width="35" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="image"/>
+                                            <state key="normal" backgroundImage="picture-gallery.png"/>
                                             <connections>
                                                 <action selector="selectCameraOrLibrary:" destination="26U-AP-1Ot" eventType="touchUpInside" id="h8f-E4-DmF"/>
                                             </connections>
@@ -279,4 +277,12 @@
             <point key="canvasLocation" x="1114" y="412"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="1calendar.png" width="512" height="512"/>
+        <image name="eraser.png" width="512" height="512"/>
+        <image name="highlighter-1.png" width="512" height="512"/>
+        <image name="paint-palette.png" width="512" height="512"/>
+        <image name="pen-3.png" width="512" height="512"/>
+        <image name="picture-gallery.png" width="512" height="512"/>
+    </resources>
 </document>
