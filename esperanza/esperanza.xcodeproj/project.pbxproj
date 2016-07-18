@@ -134,6 +134,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D146C8FC1D3CB80C0068E81B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D1B0D5FC1CB93DB000109F75 /* DrawViewController.swift */,
+				D1B0D5DA1CB8F13800109F75 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D146C8FD1D3CB81F0068E81B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EC6D07FB1CBFE1A30000A488 /* customCell.swift */,
+				D17DA4041CBD4082005223E7 /* paletteView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		D146C8FE1D3CB8310068E81B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D1D507D01CF1C55300CA8BF0 /* CanvasData.swift */,
+				D1422B7E1CF98A29001206A6 /* realmModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		D146C8FF1D3CB8410068E81B /* src */ = {
+			isa = PBXGroup;
+			children = (
+				D146C9001D3CB8650068E81B /* main */,
+				D146C8FD1D3CB81F0068E81B /* View */,
+				D146C8FC1D3CB80C0068E81B /* Controller */,
+				D146C8FE1D3CB8310068E81B /* Model */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		D146C9001D3CB8650068E81B /* main */ = {
+			isa = PBXGroup;
+			children = (
+				D1B0D5D81CB8F13800109F75 /* AppDelegate.swift */,
+			);
+			name = main;
+			sourceTree = "<group>";
+		};
 		D17DA4081CBD4111005223E7 /* images */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,13 +226,7 @@
 			children = (
 				D17DA4081CBD4111005223E7 /* images */,
 				D1B0D5F31CB9331D00109F75 /* Freamwork */,
-				D1B0D5D81CB8F13800109F75 /* AppDelegate.swift */,
-				D1D507D01CF1C55300CA8BF0 /* CanvasData.swift */,
-				D1B0D5DA1CB8F13800109F75 /* ViewController.swift */,
-				D1B0D5FC1CB93DB000109F75 /* DrawViewController.swift */,
-				D1422B7E1CF98A29001206A6 /* realmModel.swift */,
-				D17DA4041CBD4082005223E7 /* paletteView.swift */,
-				EC6D07FB1CBFE1A30000A488 /* customCell.swift */,
+				D146C8FF1D3CB8410068E81B /* src */,
 				D1B0D5DC1CB8F13800109F75 /* Main.storyboard */,
 				D1B0D5F11CB9045700109F75 /* CanvasView.xib */,
 				D17DA4061CBD408A005223E7 /* Palette.xib */,
