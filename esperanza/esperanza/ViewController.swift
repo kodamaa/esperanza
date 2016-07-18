@@ -31,7 +31,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     @IBOutlet weak var CalenderDateCell: UICollectionView!
     @IBOutlet weak var calenderCollectionView: UICollectionView!
     @IBOutlet weak var headerTitle: UILabel!
-   
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -102,6 +101,25 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         return date
     }
+    
+    func isAttachedBatch(indexPath:NSIndexPath) -> Bool {
+        // indexPath -> date
+        let date = self.dateForCellAtIndexPath(indexPath)
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy/MM/dd"
+        // date -> String
+        let dateString = dateFormatter.stringFromDate(date)
+        let instance = realmModel()
+        let image = instance.loadImageDataFromDB(dateString)
+        // 未登録であれば NSData()を返す
+        if image != NSData() {
+            // 登録済みなので hidden を解除する
+            return false
+        }
+        // 未登録
+        return true
+    }
+    
     // Mark: UICollectionViewDataSource methods
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         let calendar = NSCalendar.currentCalendar()
@@ -130,6 +148,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             let formatter = NSDateFormatter()
             formatter.dateFormat = "d"
             cell.label!.text = formatter.stringFromDate(self.dateForCellAtIndexPath(indexPath))
+            
+            let isAttach = self.isAttachedBatch(indexPath)
+            cell.batch.hidden = isAttach
         }
         //テキストカラー
         if (indexPath.row % 7 == 0) {

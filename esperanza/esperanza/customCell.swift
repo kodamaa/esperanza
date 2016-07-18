@@ -8,6 +8,7 @@
 
 class CustomCell: UICollectionViewCell {
     var label: UILabel!
+    @IBOutlet weak var batch: UIImageView!
     
     required init(coder aDecoder: NSCoder){
         super.init(coder: aDecoder)!

@@ -83,6 +83,9 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="red_batch.png" translatesAutoresizingMaskIntoConstraints="NO" id="Uoa-LP-Uoa">
+                                                    <rect key="frame" x="35" y="6" width="11" height="11"/>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
@@ -94,6 +97,7 @@
                                             <constraint firstItem="A1x-Su-Shv" firstAttribute="top" secondItem="meF-Jc-bsv" secondAttribute="topMargin" constant="-7" id="sMn-yd-qBK"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="batch" destination="Uoa-LP-Uoa" id="sTF-Du-FUc"/>
                                             <outlet property="label" destination="A1x-Su-Shv" id="Z5E-Ql-LKL"/>
                                             <segue destination="26U-AP-1Ot" kind="showDetail" id="Lww-wj-PXO"/>
                                         </connections>
@@ -284,5 +288,6 @@
         <image name="paint-palette.png" width="512" height="512"/>
         <image name="pen-3.png" width="512" height="512"/>
         <image name="picture-gallery.png" width="512" height="512"/>
+        <image name="red_batch.png" width="11" height="11"/>
     </resources>
 </document>

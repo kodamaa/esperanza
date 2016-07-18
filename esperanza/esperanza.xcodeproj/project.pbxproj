@@ -14,6 +14,7 @@
 		D142CBC41D03CD020094762D /* highlighter-1.png in Resources */ = {isa = PBXBuildFile; fileRef = D142CBC31D03CD020094762D /* highlighter-1.png */; };
 		D142CBC81D03CD100094762D /* eraser.png in Resources */ = {isa = PBXBuildFile; fileRef = D142CBC71D03CD100094762D /* eraser.png */; };
 		D142CBCA1D03CD1C0094762D /* 1calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = D142CBC91D03CD1C0094762D /* 1calendar.png */; };
+		D146C8FB1D3CAB9B0068E81B /* red_batch.png in Resources */ = {isa = PBXBuildFile; fileRef = D146C8FA1D3CAB9B0068E81B /* red_batch.png */; };
 		D17DA4051CBD4082005223E7 /* paletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17DA4041CBD4082005223E7 /* paletteView.swift */; };
 		D17DA4071CBD408A005223E7 /* Palette.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17DA4061CBD408A005223E7 /* Palette.xib */; };
 		D17DA4111CBD412E005223E7 /* black.png in Resources */ = {isa = PBXBuildFile; fileRef = D17DA4091CBD412E005223E7 /* black.png */; };
@@ -77,6 +78,7 @@
 		D142CBC31D03CD020094762D /* highlighter-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "highlighter-1.png"; path = "image/highlighter-1.png"; sourceTree = "<group>"; };
 		D142CBC71D03CD100094762D /* eraser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = eraser.png; path = image/eraser.png; sourceTree = "<group>"; };
 		D142CBC91D03CD1C0094762D /* 1calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1calendar.png; path = image/1calendar.png; sourceTree = "<group>"; };
+		D146C8FA1D3CAB9B0068E81B /* red_batch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = red_batch.png; path = image/red_batch.png; sourceTree = "<group>"; };
 		D17DA4041CBD4082005223E7 /* paletteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = paletteView.swift; sourceTree = "<group>"; };
 		D17DA4061CBD408A005223E7 /* Palette.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Palette.xib; sourceTree = "<group>"; };
 		D17DA4091CBD412E005223E7 /* black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = black.png; path = image/black.png; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				D142CBBF1D03CCEE0094762D /* picture-gallery.png */,
 				D142CBC11D03CCFA0094762D /* paint-palette.png */,
 				D142CBBD1D03CCE60094762D /* pen-3.png */,
+				D146C8FA1D3CAB9B0068E81B /* red_batch.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				D1B0D5F21CB9045700109F75 /* CanvasView.xib in Resources */,
 				D142CBC41D03CD020094762D /* highlighter-1.png in Resources */,
 				D142CBCA1D03CD1C0094762D /* 1calendar.png in Resources */,
+				D146C8FB1D3CAB9B0068E81B /* red_batch.png in Resources */,
 				D1B0D5DE1CB8F13800109F75 /* Main.storyboard in Resources */,
 				D17DA4071CBD408A005223E7 /* Palette.xib in Resources */,
 				D17DA4131CBD412E005223E7 /* green.png in Resources */,
