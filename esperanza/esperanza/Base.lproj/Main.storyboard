@@ -179,7 +179,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="PWQ-pf-BQH"/>
                                     <barButtonItem style="plain" id="i5c-fA-pZC">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0My-Og-2eU">
-                                            <rect key="frame" x="125" y="7" width="35" height="30"/>
+                                            <rect key="frame" x="94" y="7" width="35" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" backgroundImage="highlighter-1.png"/>
                                             <connections>
@@ -190,7 +190,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="j2a-CL-WNl"/>
                                     <barButtonItem style="plain" id="QkO-l9-r2P">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="86a-LF-sWI">
-                                            <rect key="frame" x="230" y="7" width="35" height="30"/>
+                                            <rect key="frame" x="169" y="7" width="35" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" backgroundImage="eraser.png"/>
                                             <connections>
@@ -201,7 +201,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="LQP-af-o8W"/>
                                     <barButtonItem style="plain" id="ssa-L0-Sor">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="P3p-15-vJM">
-                                            <rect key="frame" x="335" y="7" width="35" height="30"/>
+                                            <rect key="frame" x="243" y="7" width="35" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" backgroundImage="paint-palette.png"/>
                                             <connections>
@@ -212,7 +212,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="pSK-mx-cfi"/>
                                     <barButtonItem style="plain" id="mPd-yr-QLM" userLabel="image">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jSI-ob-uaL">
-                                            <rect key="frame" x="440" y="7" width="35" height="30"/>
+                                            <rect key="frame" x="317" y="7" width="35" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" backgroundImage="picture-gallery.png"/>
                                             <connections>
@@ -223,9 +223,34 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="kow-4c-p7N"/>
                                     <barButtonItem style="plain" id="qjH-pk-FlK">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Tw2-dy-LjZ">
-                                            <rect key="frame" x="545" y="7" width="35" height="30"/>
+                                            <rect key="frame" x="391" y="7" width="38" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Button"/>
+                                            <state key="normal" title="Undo"/>
+                                            <connections>
+                                                <action selector="undo:" destination="26U-AP-1Ot" eventType="touchUpInside" id="BDx-Pp-6Ok"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Uz3-pd-6qE"/>
+                                    <barButtonItem style="plain" id="Pes-P8-4kM">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lYO-Ku-HXL">
+                                            <rect key="frame" x="469" y="7" width="36" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Redo"/>
+                                            <connections>
+                                                <action selector="redo:" destination="26U-AP-1Ot" eventType="touchUpInside" id="ruf-8W-cu5"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="tRc-yn-avf"/>
+                                    <barButtonItem style="plain" id="EaI-1X-aNs">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0Mf-0Z-Par">
+                                            <rect key="frame" x="544" y="7" width="36" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Clear"/>
+                                            <connections>
+                                                <action selector="Clear:" destination="26U-AP-1Ot" eventType="touchUpInside" id="03W-Nq-PqZ"/>
+                                            </connections>
                                         </button>
                                     </barButtonItem>
                                 </items>

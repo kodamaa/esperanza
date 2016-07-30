@@ -25,9 +25,9 @@ class DrawViewController: UIViewController, paletteViewDelegate, UIImagePickerCo
         self.drawingView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(DrawViewController.viewTapped(_:))))
         self.drawingView.lineWidth = 3.0
         
-        let image = loadImageDataFromRealm()
+        let imageData = loadImageDataFromRealm()
         // imageで渡すとサイズがおかしくなるためdata形式で渡している
-        drawingView.loadImageData(image)
+        drawingView.loadImageData(imageData)
     }
     
     override func didReceiveMemoryWarning() {
@@ -58,6 +58,17 @@ class DrawViewController: UIViewController, paletteViewDelegate, UIImagePickerCo
         self.drawingView.lineWidth = 15.0
     }
     
+    @IBAction func undo(sender: AnyObject) {
+        self.drawingView.undoLatestStep()
+    }
+    
+    @IBAction func redo(sender: AnyObject) {
+        self.drawingView.redoLatestStep()
+    }
+    
+    @IBAction func Clear(sender: AnyObject) {
+        drawingView.loadImageData(NSData())
+    }
     func viewTapped(sender: UITapGestureRecognizer) {
         // FIXME: panGestureのみをremoveできなかったため、全部消して必要なものだけ再度addしている
         // fix image position
